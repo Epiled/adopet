@@ -1,3 +1,6 @@
+@import url(./reset.css);
+@import url(./header/header.css);
+
 :root {
   --verde: #36D6AD;
   --azul: #3772FF;
