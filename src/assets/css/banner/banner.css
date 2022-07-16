@@ -6,6 +6,9 @@
   flex: 1;
   color: var(--branco);
   padding: 0 5.6em;
+  background: url(../../img/banner/Forma\ 1.svg) no-repeat left top,
+              url(../../img/banner/Forma\ 2.svg) no-repeat right center,
+              url(../../img/banner/Ilustração_\(1\).png) no-repeat center bottom / 24.7em;
 }
 
 .banner_logo {
