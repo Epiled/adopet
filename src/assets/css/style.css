@@ -1,5 +1,6 @@
 @import url(./reset.css);
 @import url(./menu/menu.css);
+@import url(./banner/banner.css);
 
 :root {
   --verde: #36D6AD;
@@ -10,9 +11,43 @@
   --cinza-claro: #BCBCBC;
   --cinza-claro-fundos: #F7F7F7;
 
+  --branco: #FFFFFF;
+
+  --font-principal: 'Poppins', sans-serif;
+  --font-secundaria: 'IBM Plex Sans', sans-serif;
+
   font-size: 62.5%;
 }
 
 body {
   background: var(--azul);
+  font-family: var(--font-principal);
+}
+
+.conteiner {
+  display: flex;
+  height: 100vh;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.botoes_botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-principal);
+  font-weight: 600;
+  font-size: 1.6em;
+  background-color: var(--coral);
+  border-radius: .6rem;
+  padding: .8rem;
+  color: var(--branco);
+  text-decoration: none;
+  filter: drop-shadow(.2rem .2rem .4rem rgba(0, 0, 0, .25));
+  min-height: 4rem;
+  box-sizing: border-box;
 }
