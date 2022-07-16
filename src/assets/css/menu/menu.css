@@ -1,0 +1,17 @@
+.menu_lista {
+  display: flex;
+}
+
+.menu_link {
+  display: inline-block;
+  min-height: 5rem;
+  min-width: 5rem;
+}
+
+.menu_link-casa {
+  background: url(../../img/header/Casa.svg);
+}
+
+.menu_link-email {
+  background: url(../../img/header/Mensagens.svg);
+}
