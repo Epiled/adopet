@@ -1,11 +1,10 @@
 .banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex: 1;
   color: var(--branco);
-  padding: 16.8rem 5.6em 0 5.6em;
+  padding: 16.8em 5.6em 0 5.6em;
   background: url(../../img/banner/Forma\ 1.svg) no-repeat left top,
               url(../../img/banner/Forma\ 2.svg) no-repeat right center,
               url(../../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% + 1.6rem) / 24.7em;
