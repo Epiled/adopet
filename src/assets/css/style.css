@@ -1,6 +1,7 @@
 @import url(./reset.css);
 @import url(./menu/menu.css);
 @import url(./banner/banner.css);
+@import url(./rodape/rodape.css);
 
 :root {
   --verde: #36D6AD;
@@ -22,11 +23,15 @@
 body {
   background: var(--azul);
   font-family: var(--font-principal);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .conteiner {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  flex: 1;
 }
 
 .botoes {

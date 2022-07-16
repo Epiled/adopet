@@ -8,7 +8,7 @@
   padding: 0 5.6em;
   background: url(../../img/banner/Forma\ 1.svg) no-repeat left top,
               url(../../img/banner/Forma\ 2.svg) no-repeat right center,
-              url(../../img/banner/Ilustração_\(1\).png) no-repeat center bottom / 24.7em;
+              url(../../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% + 1.6rem) / 24.7em;
 }
 
 .banner_logo {
