@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adopet</title>
+  <title>Login - Adopet</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="container container-inicial">
+<body class="container">
   <header class="menu">
     <nav>
       <ul class="menu_lista">
@@ -28,19 +28,25 @@
     </nav>
   </header>
   <main class="container_principal">
-    <section class="principal principal-inicial">
-      <img class="principal_logo-inicial" src="./assets/img/banner/Logo.svg" alt="Adopet" width="260" height="64">
-
-      <h1 class="principal_titulo">Boas-vindas!</h1>
+    <section class="principal principal-login">
+      <img class="principal_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
 
       <div class="principal_textos">
-        <p class="principal_texto">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+        <p class="principal_texto">Já tem conta? Faça seu login::</p>
       </div>
 
-      <div class="botoes">
-        <a class="botoes_botao botoes_botao-inicial" href="./login.html">Já tenho conta</a>
-        <a class="botoes_botao botoes_botao-inicial" href="./cadastro.html">Quero me cadastrar</a>
-      </div>
+      <form class="formulario" action="home.html">
+        <label class="formulario_etiqueta" for="">Email
+          <input class="formulario_campo" type="text" placeholder="Escolha seu melhor email">
+        </label>
+        <label class="formulario_etiqueta" for="">Senha
+          <input class="formulario_campo" type="text" placeholder="Crie uma senha">
+        </label>
+
+        <a class="formulario_link" href="#">Esqueci minha senha.</a>
+
+        <button class="botoes_botao" type="submit">Entrar</button>
+      </form>
     </section>
   </main>
 
