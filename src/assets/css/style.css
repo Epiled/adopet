@@ -4,6 +4,7 @@
 @import url(./principal.css);
 @import url(./rodape.css);
 @import url(./formulario.css);
+@import url(./pets.css);
 
 :root {
   --verde: #36D6AD;

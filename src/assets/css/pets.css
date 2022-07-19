@@ -1,0 +1,51 @@
+.pets {
+  padding: 1.6em 2.4em;
+  background: var(--cinza-claro-fundos);
+}
+
+.pets_item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1.6em;
+  color: var(--cinza);
+}
+
+.pets_imagem {
+  width: 100%;
+  height: auto;
+}
+
+.pets_dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pets_nome {
+  color: var(--azul);
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pets_infos {
+  font-size: 1.4em;
+  line-height: 2rem;
+}
+
+.pets_endereco {
+  font-size: 1.2rem;
+  margin-bottom: .8rem;
+}
+
+.pets_responsavel {
+  display: flex;
+  align-items: center;
+  color: var(--cinza);
+  font-size: 1em;
+  height: 1.8rem;
+  padding-left: 2.6rem;
+  background: url(../img/pets/ícone_mensagem.svg) no-repeat left center / 1.8rem;
+  box-sizing: border-box;
+  text-decoration: none;
+}

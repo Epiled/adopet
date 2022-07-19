@@ -1,7 +1,9 @@
 .menu {
   position: fixed;
   top: 3.4rem;
-  left: 3.4rem;
+  width: 100%;
+  padding: 0 3.4rem;
+  box-sizing: border-box;
 }
 
 .menu_lista {
@@ -10,21 +12,28 @@
 }
 
 .menu_item {
-  height: fit-content;
-}
-
-.menu_link {
-  display: inline-block;
-  min-height: 5rem;
-  min-width: 5rem;
+  height: 5rem;
+  width: 5rem;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.menu_link-casa {
+.menu_link {
+  display: inline-block;
+  height: inherit;
+  width: inherit;
+}
+
+.menu_item-casa {
   background-image: url(../img/header/Casa.svg);
 }
 
-.menu_link-email {
+.menu_item-email {
   background-image: url(../img/header/Mensagens.svg);
+}
+
+.menu_item-perfil {
+  background-image: url(../img/header/Usuário.png);
+  background-size: 5em;
+  margin-left: auto;
 }
