@@ -24,3 +24,20 @@
 .container_principal-pets {
   background: url(../img/banner/Forma\ 1.svg) no-repeat left top;
 }
+
+@media screen and (min-width: 768px) {
+  .container_principal-inicial {
+    background-size: 56em, 13.4em, 33.8em;
+  }
+
+  .container_principal-pets {
+    background-size: 56em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container_principal-pets {
+    background: url(../img/banner/Forma\ 1.svg) no-repeat left top / 56em,
+      url(../img/banner/Forma\ 2.svg) no-repeat no-repeat right center / 13.4em;
+  }
+}

@@ -55,14 +55,25 @@
 }
 
 @media screen and (min-width: 768px) {
+  .principal-inicial {
+    padding: 27.4em 0;
+    width: 34.4em;
+  }
+
   .principal-pets {
-    padding: 16.8em 3.2em 3.2em 3.2em;
+    padding: 28.8em 3.2em 3.2em 3.2em;
     max-width: 76.8em;
+  }
+
+  .principal_texto {
+    width: initial;
+    font-size: 1.8em;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .principal-pets {
+    padding: 20.5em 3.2em 7.2em 3.2em;
     max-width: 112em;
   }
 }
