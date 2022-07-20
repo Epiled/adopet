@@ -5,13 +5,22 @@
   background: var(--branco);
 }
 
-.container-inicial {
-  background: var(--azul);
-}
-
-
 .container_principal {
   display: flex;
   flex-direction: column;
   flex: 1;
+  background: url(../img/banner/Patas.svg) no-repeat right top,
+    url(../img/banner/Forma\ 1.svg) no-repeat left top,
+    url(../img/banner/Forma\ 3.svg) no-repeat left calc(100% - 3.2rem);
+}
+
+.container_principal-inicial {
+  background: url(../img/banner/Forma\ 1.svg) no-repeat left top,
+    url(../img/banner/Forma\ 2.svg) no-repeat right center,
+    url(../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% + 1.6rem) / 24.7em,
+    var(--azul);
+}
+
+.container_principal-pets {
+  background: url(../img/banner/Forma\ 1.svg) no-repeat left top;
 }
