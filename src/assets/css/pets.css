@@ -1,6 +1,7 @@
 .pets {
-  padding: 1.6em 2.4em;
-  background: var(--cinza-claro-fundos);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
 }
 
 .pets_item {
@@ -8,6 +9,8 @@
   grid-template-columns: 50% 50%;
   gap: 1.6em;
   color: var(--cinza);
+  padding: 1.6em 2.4em;
+  background: var(--cinza-claro-fundos);
 }
 
 .pets_imagem {
