@@ -1,12 +1,11 @@
 .pets {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1.6em;
 }
 
 .pets_item {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.6em;
   color: var(--cinza);
   padding: 1.6em 2.4em;
@@ -51,4 +50,16 @@
   background: url(../img/pets/ícone_mensagem.svg) no-repeat left center / 1.8rem;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .pets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pets {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

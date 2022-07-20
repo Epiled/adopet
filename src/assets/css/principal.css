@@ -5,31 +5,20 @@
   flex: 1;
   color: var(--azul);
   padding: 15.6em 2.5em 0 2.5em;
-  background: url(../img/banner/Patas.svg) no-repeat right top,
-    url(../img/banner/Forma\ 1.svg) no-repeat left top,
-    url(../img/banner/Forma\ 3.svg) no-repeat left calc(100% - 3.2rem);
+  margin: 0 auto;
 }
 
 .principal-inicial {
   color: var(--branco);
   padding: 16.8em 5.6em 0 5.6em;
-  background: url(../img/banner/Forma\ 1.svg) no-repeat left top,
-    url(../img/banner/Forma\ 2.svg) no-repeat right center,
-    url(../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% + 1.6rem) / 24.7em;
 }
 
 .principal-login {
   gap: 1.6em;
 }
 
-.principal-home {
-  padding: 16.8em 5.6em 0 5.6em;
-  background: url(../img/banner/Forma\ 1.svg) no-repeat left top;
-}
-
 .principal-pets {
   padding: 16.8em 0 0 0;
-  background: url(../img/banner/Forma\ 1.svg) no-repeat left top;
 }
 
 .principal_logo {
@@ -63,4 +52,17 @@
 .principal_texto {
   width: 25rem;
   line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .principal-pets {
+    padding: 16.8em 3.2em 3.2em 3.2em;
+    max-width: 76.8em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .principal-pets {
+    max-width: 112em;
+  }
 }
