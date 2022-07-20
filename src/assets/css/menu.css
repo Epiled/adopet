@@ -1,9 +1,20 @@
 .menu {
-  position: fixed;
-  top: 3.4rem;
+  position: absolute;
+  top: 3.4em;
+  left: 0;
   width: 100%;
-  padding: 0 3.4rem;
+  padding: 0 3.4em;
   box-sizing: border-box;
+}
+
+.menu_navegacao {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.menu_logo {
+  display: none;
 }
 
 .menu_lista {
@@ -36,4 +47,12 @@
   background-image: url(../img/header/Usuário.png);
   background-size: 5em;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+
+  .menu_logo {
+    display: initial;
+  }
 }
