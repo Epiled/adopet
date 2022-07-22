@@ -23,7 +23,3 @@ const listaCompleta = lista.map((item) => {
 }).join('');
 
 conteinerPets.innerHTML = listaCompleta;
-
-console.log(conteinerPets);
-console.log(lista);
-console.log(listaCompleta);

@@ -1,0 +1,74 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--branco);
+}
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: url(../img/banner/Patas.svg) no-repeat right top,
+    url(../img/banner/Forma\ 1.svg) no-repeat left top,
+    url(../img/banner/Forma\ 3.svg) no-repeat left calc(100% - 3.2rem);
+}
+
+.login_conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  color: var(--azul);
+  padding: 0 2.5em 0 2.5em;
+  margin: 15.6em auto 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login_logo {
+  width: 14.2em;
+  height: auto;
+  margin-bottom: 2.5em;
+}
+
+.login_texto {
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  line-height: 2.1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .login_container {
+    background: url(../img/banner/Patas.svg) no-repeat right top / 23em,
+    url(../img/banner/Forma\ 1.svg) no-repeat left top / 56em,
+    url(../img/banner/Forma\ 2.svg) no-repeat right center/ 13.4em;
+  }
+
+  .login_conteudo {
+    margin: 25em auto 5em auto;
+  }
+
+  .login_logo {
+    width: 25.2em;
+  }
+
+  .login_texto {
+    width: initial;
+    font-size: 1.8em;
+    line-height: 2.6rem;
+    max-width: 52.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .login_container {
+    background-size: 30em, 56em, 13.4em;
+  }
+
+  .login_conteudo {
+    margin: 13em auto 5em auto;
+  }
+}

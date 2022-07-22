@@ -14,9 +14,10 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="container">
+<body class="login">
   <header class="menu">
-    <nav>
+    <nav class="menu_navegacao">
+      <img class="menu_logo" src="./assets/img/header/Logo.svg" alt="Logo - Adopet" width="128" height="31">
       <ul class="menu_lista">
         <li class="menu_item menu_item-casa">
           <a class="menu_link" href="./index.html" aria-label="Página Inicial"></a>
@@ -27,20 +28,18 @@
       </ul>
     </nav>
   </header>
-  <main class="container_principal">
-    <section class="principal principal-login">
-      <img class="principal_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
+  <main class="login_container">
+    <section class="login_conteudo">
+      <img class="login_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
 
-      <div class="principal_textos">
-        <p class="principal_texto">Já tem conta? Faça seu login::</p>
-      </div>
+      <p class="login_texto">Já tem conta? Faça seu login:</p>
 
       <form class="formulario" action="home.html">
         <label class="formulario_etiqueta" for="">Email
-          <input class="formulario_campo" type="text" placeholder="Escolha seu melhor email">
+          <input class="formulario_campo formulario_email" type="text" placeholder="Escolha seu melhor email">
         </label>
         <label class="formulario_etiqueta" for="">Senha
-          <input class="formulario_campo" type="text" placeholder="Crie uma senha">
+          <input class="formulario_campo formulario_senha" type="text" placeholder="Crie uma senha">
         </label>
 
         <a class="formulario_link" href="#">Esqueci minha senha.</a>

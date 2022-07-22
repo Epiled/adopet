@@ -14,9 +14,10 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="container">
+<body class="cadastro">
   <header class="menu">
-    <nav>
+    <nav class="menu_navegacao">
+      <img class="menu_logo" src="./assets/img/header/Logo.svg" alt="Logo - Adopet" width="128" height="31">
       <ul class="menu_lista">
         <li class="menu_item menu_item-casa">
           <a class="menu_link" href="./index.html" aria-label="Página Inicial"></a>
@@ -27,13 +28,13 @@
       </ul>
     </nav>
   </header>
-  <main class="container_principal">
-    <section class="principal">
-      <img class="principal_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
+  <main class="cadastro_container">
+    <section class="cadastro_conteudo">
+      <img class="cadastro_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
 
-      <div class="principal_textos">
-        <p class="principal_texto">Ainda não tem cadastro?</p>
-        <p class="principal_texto">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+      <div class="cadastro_textos">
+        <p class="cadastro_texto">Ainda não tem cadastro?</p>
+        <p class="cadastro_texto">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
       </div>
 
       <form class="formulario" action="">
@@ -44,10 +45,10 @@
           <input class="formulario_campo" type="text" placeholder="Digite seu nome completo">
         </label>
         <label class="formulario_etiqueta" for="">Senha
-          <input class="formulario_campo" type="text" placeholder="Crie uma senha">
+          <input class="formulario_campo formulario_senha" type="text" placeholder="Crie uma senha">
         </label>
         <label class="formulario_etiqueta" for="">Confirma sua senha
-          <input class="formulario_campo" type="text" placeholder="Repita a senha criada acima">
+          <input class="formulario_campo formulario_senha" type="text" placeholder="Repita a senha criada acima">
         </label>
 
         <button class="botoes_botao" type="submit">Cadastrar</button>

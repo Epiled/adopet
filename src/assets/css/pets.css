@@ -10,6 +10,7 @@
   color: var(--cinza);
   padding: 1.6em 2.4em;
   background: var(--cinza-claro-fundos);
+  max-width: 36em;
 }
 
 .pets_imagem {
@@ -55,6 +56,10 @@
 @media screen and (min-width: 768px) {
   .pets {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pets_item {
+    max-width: none;
   }
 }
 

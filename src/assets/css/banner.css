@@ -1,0 +1,76 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url(../img/banner/Forma\ 1.svg) no-repeat left top,
+    url(../img/banner/Forma\ 2.svg) no-repeat right center,
+    url(../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% - 9rem) / 24.7em,
+    var(--azul);
+    font-family: var(--font-principal);
+}
+
+.banner_cotainer {
+  height: 100%;
+}
+
+.banner_conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--branco);
+  padding: 0 5.6em 0 5.6em;
+  margin-top: 16.8em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner_logo {
+  height: 4.6em;
+}
+
+.banner_titulo {
+  font-family: var(--font-secundaria);
+  font-size: 2.6em;
+  font-weight: 500;
+  line-height: 4.8rem;
+  margin: 2.4rem 0 1.6rem 0;
+}
+
+.banner_texto {
+  font-size: 1.6em;
+  margin-bottom: 2.4rem;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-size: 56em, 13.4em, 33.8em;
+  }
+
+  .banner_conteudo {
+    max-width: 34.4em;
+    margin-top: 27.3em;
+  }
+
+  .banner_logo {
+    height: 6.2em;
+  }
+
+  .banner_titulo {
+    font-size: 2.8em;
+    margin: 4rem 0 2.4rem 0;
+  }
+
+  .banner_texto {
+    font-size: 1.8em;
+    line-height: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .banner_conteudo {
+    max-width: 48.8em;
+    margin-top: 13em;
+  }
+}

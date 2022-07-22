@@ -1,10 +1,12 @@
 @import url(./reset.css);
-@import url(./container.css);
 @import url(./menu.css);
-@import url(./principal.css);
 @import url(./rodape.css);
 @import url(./formulario.css);
 @import url(./pets.css);
+@import url(./banner.css);
+@import url(./cadastro.css);
+@import url(./login.css);
+@import url(./home.css);
 
 :root {
   --verde: #36D6AD;
@@ -53,8 +55,10 @@ body {
   align-self: center;
 }
 
-.botoes_botao-inicial {
-  align-self: auto;
+.botoes_botao-banner {
+  align-self: center;
+  max-width: 36.2rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
