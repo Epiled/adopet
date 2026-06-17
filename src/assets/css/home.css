@@ -2,27 +2,27 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: var(--branco);
+  background: var(--color-surface-white);
 }
 
-.home_container {
+.home__container {
   display: flex;
   flex-direction: column;
   flex: 1;
   background: url(../img/banner/Forma\ 1.svg) no-repeat left top;
 }
 
-.home_conteudo {
+.home__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  color: var(--azul);
+  color: var(--color-secondary);
   padding: 0;
   margin: 16.8em auto 0 auto;
 }
 
-.home_texto {
+.home__text {
   font-size: 1.6em;
   text-align: center;
   line-height: 2rem;
@@ -31,17 +31,17 @@
 }
 
 @media screen and (min-width: 768px) {
-  .home_container {
+  .home__container {
     background-size: 56em;
   }
 
-  .home_conteudo {
+  .home__content {
     padding: 0 3.2em 3.2em 3.2em;
     max-width: 76.8em;
     margin-top: 28.8em;
   }
 
-  .home_texto {
+  .home__text {
     width: initial;
     max-width: 52.5rem;
     font-size: 1.8em;
@@ -50,12 +50,13 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .home_container {
-    background: url(../img/banner/Forma\ 1.svg) no-repeat left top / 56em,
+  .home__container {
+    background:
+      url(../img/banner/Forma\ 1.svg) no-repeat left top / 56em,
       url(../img/banner/Forma\ 2.svg) no-repeat no-repeat right center / 13.4em;
   }
 
-  .home_conteudo {
+  .home__content {
     padding: 0 3.2em 7.2em 3.2em;
     max-width: 112em;
     margin-top: 20.4em;

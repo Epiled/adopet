@@ -1,68 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Adopet</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Adopet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <body class="container home">
+    <header class="menu">
+      <nav class="menu__navigation">
+        <img
+          class="menu__logo"
+          src="./assets/img/header/Logo.svg"
+          alt="Logo - Adopet"
+          width="128"
+          height="31"
+        />
+        <ul class="menu__list">
+          <li class="menu__item menu__item-casa">
+            <a
+              class="menu_link"
+              href="./index.html"
+              aria-label="Página Inicial"
+            ></a>
+          </li>
+          <li class="menu__item menu__item--email">
+            <a
+              class="menu_link"
+              href="#"
+              aria-label="Entrar em contato via e-mail"
+            ></a>
+          </li>
+          <li class="menu__item menu__item--profile">
+            <a
+              class="menu_link"
+              href="#"
+              aria-label="Entrar em contato via e-mail"
+              aria-labelledby="Seu Perfil"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="home__container">
+      <section class="home__content">
+        <p class="home__text">Olá! Veja os amigos disponíveis para adoção!</p>
 
-<body class="container home">
-  <header class="menu">
-    <nav class="menu_navegacao">
-      <img class="menu_logo" src="./assets/img/header/Logo.svg" alt="Logo - Adopet" width="128" height="31">
-      <ul class="menu_lista">
-        <li class="menu_item menu_item-casa">
-          <a class="menu_link" href="./index.html" aria-label="Página Inicial"></a>
-        </li>
-        <li class="menu_item menu_item-email">
-          <a class="menu_link" href="#" aria-label="Entrar em contato via e-mail"></a>
-        </li>
-        <li class="menu_item menu_item-perfil">
-          <a class="menu_link" href="#" aria-label="Entrar em contato via e-mail" aria-labelledby="Seu Perfil"></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="home_container">
-    <section class="home_conteudo">
-
-      <p class="home_texto">Olá! Veja os amigos disponíveis para adoção!</p>
-
-      <ul class="pets" data-lista-pets>
-        <li class="pets_item">
-          <img class="pets_imagem" src="./assets/img/pets/Animais_-_Dunga.png" width="650" height="650" alt="Cachorro">
-          <div class="pets_dados">
-            <div>
-              <h2 class="pets_nome">Dunga</h2>
-              <ul class="pets_infos">
-                <li>2 anos</li>
-                <li>Porte pequeno</li>
-                <li>Calmo e educado</li>
-              </ul>
+        <ul class="pets" data-lista-pets>
+          <li class="pets__item">
+            <img
+              class="pets__image"
+              src="./assets/img/pets/Animais_-_Dunga.png"
+              width="650"
+              height="650"
+              alt="Cachorro"
+            />
+            <div class="pets__data">
+              <div>
+                <h2 class="pets__name">Dunga</h2>
+                <ul class="pets__infos">
+                  <li>2 anos</li>
+                  <li>Porte pequeno</li>
+                  <li>Calmo e educado</li>
+                </ul>
+              </div>
+              <div>
+                <p class="pets__address">Rio de Janeiro (RJ)</p>
+                <a class="pets__responsible" href="#">Falar com responsável</a>
+              </div>
             </div>
-            <div>
-              <p class="pets_endereco">Rio de Janeiro (RJ)</p>
-              <a class="pets_responsavel" href="#">Falar com responsável</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </main>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-  <footer class="rodape">
-    <p class="rodape_texto">2022 - Desenvolvido por Alura.</p>
-  </footer>
+    <footer class="footer">
+      <p class="footer__text">2022 - Desenvolvido por Alura.</p>
+    </footer>
 
-  <script type="module" src="./assets/js/lista.js"></script>
-</body>
-
+    <script type="module" src="./assets/js/lista.js"></script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-.formulario {
+.form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -6,49 +6,49 @@
   max-width: 34.4em;
 }
 
-.formulario_etiqueta {
+.form__label {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.6em;
-  color: var(--cinza);
+  color: var(--color-surface-cream);
   line-height: 2.4rem;
   gap: 1rem;
 }
 
-.formulario_campo {
-  background: var(--cinza-claro-fundos);
+.form__input {
+  background: var(--color-background-main);
   height: 4rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   box-sizing: border-box;
   border-radius: 0.6rem;
-  box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
   border: 0;
   width: 100%;
 }
 
-.formulario_campo::placeholder {
-  color: var(--cinza-claro);
+.form__input::placeholder {
+  color: var(--color-surface-cream-claro);
   text-align: center;
 }
 
-.formulario_link {
-  color: var(--coral);
+.form__link {
+  color: var(--color-accent);
   font-size: 1.2em;
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 1440px) {
-  .formulario {
+  .form {
     max-width: initial;
   }
 
-  .formulario_senha {
+  .form__password {
     max-width: 36.2rem;
   }
 
-  .formulario_email {
+  .form__email {
     max-width: 55.2rem;
   }
 }

@@ -1,64 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register - Adopet</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - Adopet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <body class="register">
+    <header class="menu">
+      <nav class="menu__navigation">
+        <img
+          class="menu__logo"
+          src="./assets/img/header/Logo.svg"
+          alt="Logo - Adopet"
+          width="128"
+          height="31"
+        />
+        <ul class="menu__list">
+          <li class="menu__item menu__item-casa">
+            <a
+              class="menu_link"
+              href="./index.html"
+              aria-label="Página Inicial"
+            ></a>
+          </li>
+          <li class="menu__item menu__item--email">
+            <a
+              class="menu_link"
+              href="#"
+              aria-label="Entrar em contato via e-mail"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="register__container">
+      <section class="register__content">
+        <img
+          class="register__logo"
+          src="./assets/img/conteiner/Logo_-_azul.png"
+          alt="Adopet"
+          width="260"
+          height="64"
+        />
 
-<body class="cadastro">
-  <header class="menu">
-    <nav class="menu_navegacao">
-      <img class="menu_logo" src="./assets/img/header/Logo.svg" alt="Logo - Adopet" width="128" height="31">
-      <ul class="menu_lista">
-        <li class="menu_item menu_item-casa">
-          <a class="menu_link" href="./index.html" aria-label="Página Inicial"></a>
-        </li>
-        <li class="menu_item menu_item-email">
-          <a class="menu_link" href="#" aria-label="Entrar em contato via e-mail"></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="cadastro_container">
-    <section class="cadastro_conteudo">
-      <img class="cadastro_logo" src="./assets/img/conteiner/Logo_-_azul.png" alt="Adopet" width="260" height="64">
+        <div class="register__texts">
+          <p class="register__text">Ainda não tem register?</p>
+          <p class="register__text">
+            Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
+          </p>
+        </div>
 
-      <div class="cadastro_textos">
-        <p class="cadastro_texto">Ainda não tem cadastro?</p>
-        <p class="cadastro_texto">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
-      </div>
+        <form class="form" action="">
+          <label class="form__label" for=""
+            >Email
+            <input
+              class="form__input"
+              type="text"
+              placeholder="Escolha seu melhor email"
+            />
+          </label>
+          <label class="form__label" for=""
+            >Nome
+            <input
+              class="form__input"
+              type="text"
+              placeholder="Digite seu nome completo"
+            />
+          </label>
+          <label class="form__label" for=""
+            >Senha
+            <input
+              class="form__input form__password"
+              type="text"
+              placeholder="Crie uma senha"
+            />
+          </label>
+          <label class="form__label" for=""
+            >Confirma sua senha
+            <input
+              class="form__input form__password"
+              type="text"
+              placeholder="Repita a senha criada acima"
+            />
+          </label>
 
-      <form class="formulario" action="">
-        <label class="formulario_etiqueta" for="">Email
-          <input class="formulario_campo" type="text" placeholder="Escolha seu melhor email">
-        </label>
-        <label class="formulario_etiqueta" for="">Nome
-          <input class="formulario_campo" type="text" placeholder="Digite seu nome completo">
-        </label>
-        <label class="formulario_etiqueta" for="">Senha
-          <input class="formulario_campo formulario_senha" type="text" placeholder="Crie uma senha">
-        </label>
-        <label class="formulario_etiqueta" for="">Confirma sua senha
-          <input class="formulario_campo formulario_senha" type="text" placeholder="Repita a senha criada acima">
-        </label>
+          <button class="button" type="submit">Cadastrar</button>
+        </form>
+      </section>
+    </main>
 
-        <button class="botoes_botao" type="submit">Cadastrar</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <p class="rodape_texto">2022 - Desenvolvido por Alura.</p>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <p class="footer__text">2022 - Desenvolvido por Alura.</p>
+    </footer>
+  </body>
 </html>
