@@ -2,21 +2,23 @@
   "name": "adopet",
   "version": "1.0.0",
   "description": "Site sobre adoção de pets",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
+    "dev": "browser-sync start --server --files '*.html, css/*.css, js/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Epiled/adopet.git"
   },
-  "author": "Felipe De Andrade Mendonça",
+  "author": "Felipe De Andrade (https://github.com/Epiled)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Epiled/adopet/issues"
   },
   "homepage": "https://github.com/Epiled/adopet#readme",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"
