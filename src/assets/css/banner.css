@@ -3,9 +3,9 @@
   flex-direction: column;
   height: 100vh;
   background:
-    url(../img/banner/Forma\ 1.svg) no-repeat left top,
-    url(../img/banner/Forma\ 2.svg) no-repeat right center,
-    url(../img/banner/Ilustração_\(1\).png) no-repeat center calc(100% - 9rem) /
+    url(../img/banner/shape-1.svg) no-repeat left top,
+    url(../img/banner/shape-2.svg) no-repeat right center,
+    url(../img/banner/illustration.png) no-repeat center calc(100% - 9rem) /
       24.7em,
     var(--color-secondary);
   font-family: var(--font-family-primary);

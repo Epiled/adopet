@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6em;
-  color: var(--color-surface-cream);
+  color: var(--color-text-base);
   padding: 1.6em 2.4em;
   background: var(--color-background-main);
   max-width: 36em;
@@ -44,11 +44,11 @@
 .pets__responsible {
   display: flex;
   align-items: center;
-  color: var(--color-surface-cream);
+  color: var(--color-text-base);
   font-size: 1em;
   height: 1.8rem;
   padding-left: 2.6rem;
-  background: url(../img/pets/ícone_mensagem.svg) no-repeat left center / 1.8rem;
+  background: url(../img/pets/message.svg) no-repeat left center / 1.8rem;
   box-sizing: border-box;
   text-decoration: none;
 }

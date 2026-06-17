@@ -36,16 +36,16 @@
   width: inherit;
 }
 
-.menu__item--casa {
-  background-image: url(../img/header/Casa.svg);
+.menu__item--house {
+  background-image: url(../img/header/house.svg);
 }
 
 .menu__item--email {
-  background-image: url(../img/header/Mensagens.svg);
+  background-image: url(../img/header/messages.svg);
 }
 
 .menu__item--profile {
-  background-image: url(../img/header/Usuário.png);
+  background-image: url(../img/header/user.png);
   background-size: 5em;
   margin-left: auto;
 }

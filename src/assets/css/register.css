@@ -10,9 +10,9 @@
   flex-direction: column;
   flex: 1;
   background:
-    url(../img/banner/Patas.svg) no-repeat right top,
-    url(../img/banner/Forma\ 1.svg) no-repeat left top,
-    url(../img/banner/Forma\ 3.svg) no-repeat left calc(100% - 3.2rem);
+    url(../img/banner/paws.svg) no-repeat right top,
+    url(../img/banner/shape-1.svg) no-repeat left top,
+    url(../img/banner/shape-3.svg) no-repeat left calc(100% - 3.2rem);
 }
 
 .register__content {
@@ -47,9 +47,9 @@
 @media screen and (min-width: 768px) {
   .register__container {
     background:
-      url(../img/banner/Patas.svg) no-repeat right top / 23em,
-      url(../img/banner/Forma\ 1.svg) no-repeat left top / 56em,
-      url(../img/banner/Forma\ 2.svg) no-repeat right center/ 13.4em;
+      url(../img/banner/paws.svg) no-repeat right top / 23em,
+      url(../img/banner/shape-1.svg) no-repeat left top / 56em,
+      url(../img/banner/shape-2.svg) no-repeat right center/ 13.4em;
   }
 
   .register__content {
