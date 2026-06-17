@@ -1,51 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopet</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adopet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <body class="banner">
+    <header class="menu">
+      <nav class="menu__navigation">
+        <img
+          class="menu__logo"
+          src="./assets/img/header/logo.svg"
+          alt="Logo - Adopet"
+          width="128"
+          height="31"
+        />
+        <ul class="menu__list">
+          <li class="menu__item menu__item--house">
+            <a
+              class="menu_link"
+              href="./index.html"
+              aria-label="Página Inicial"
+            ></a>
+          </li>
+          <li class="menu__item menu__item--email">
+            <a
+              class="menu_link"
+              href="#"
+              aria-label="Entrar em contato via e-mail"
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="banner__container">
+      <section class="banner__content">
+        <img
+          class="banner__logo"
+          src="./assets/img/banner/logo.svg"
+          alt="Adopet"
+          width="260"
+          height="64"
+        />
 
-<body class="banner">
-  <header class="menu">
-    <nav class="menu_navegacao">
-      <img class="menu_logo" src="./assets/img/header/Logo.svg" alt="Logo - Adopet" width="128" height="31">
-      <ul class="menu_lista">
-        <li class="menu_item menu_item-casa">
-          <a class="menu_link" href="./index.html" aria-label="Página Inicial"></a>
-        </li>
-        <li class="menu_item menu_item-email">
-          <a class="menu_link" href="#" aria-label="Entrar em contato via e-mail"></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="banner_cotainer">
-    <section class="banner_conteudo">
-      <img class="banner_logo" src="./assets/img/banner/Logo.svg" alt="Adopet" width="260" height="64">
+        <h1 class="banner_title">Boas-vindas!</h1>
 
-      <h1 class="banner_titulo">Boas-vindas!</h1>
+        <p class="banner__text">
+          Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
+          gente!
+        </p>
 
-      <p class="banner_texto">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+        <div class="banner__buttons">
+          <a class="button button--banner" href="./login.html"
+            >Já tenho conta</a
+          >
+          <a class="button button--banner" href="./cadastro.html"
+            >Quero me cadastrar</a
+          >
+        </div>
+      </section>
+    </main>
 
-      <div class="botoes">
-        <a class="botoes_botao botoes_botao-banner" href="./login.html">Já tenho conta</a>
-        <a class="botoes_botao botoes_botao-banner" href="./cadastro.html">Quero me cadastrar</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <p class="rodape_texto">2022 - Desenvolvido por Alura.</p>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <p class="footer__text">2022 - Desenvolvido por Alura.</p>
+    </footer>
+  </body>
 </html>

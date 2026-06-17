@@ -1,12 +1,12 @@
-.rodape {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--verde);
+  background-color: var(--color-primary);
   min-height: 10.4em;
 }
 
-.rodape_texto {
+.footer__text {
   font-size: 1.6em;
-  color: var(--branco);
+  color: var(--color-neutral-white);
 }

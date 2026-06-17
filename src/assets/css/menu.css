@@ -7,23 +7,23 @@
   box-sizing: border-box;
 }
 
-.menu_navegacao {
+.menu__navigation {
   display: flex;
   align-items: center;
   gap: 3em;
 }
 
-.menu_logo {
+.menu__logo {
   display: none;
 }
 
-.menu_lista {
+.menu__list {
   display: flex;
   gap: 3rem;
   width: 100%;
 }
 
-.menu_item {
+.menu__item {
   height: 5rem;
   width: 5rem;
   background-position: center;
@@ -36,16 +36,16 @@
   width: inherit;
 }
 
-.menu_item-casa {
-  background-image: url(../img/header/Casa.svg);
+.menu__item--house {
+  background-image: url(../img/header/house.svg);
 }
 
-.menu_item-email {
-  background-image: url(../img/header/Mensagens.svg);
+.menu__item--email {
+  background-image: url(../img/header/messages.svg);
 }
 
-.menu_item-perfil {
-  background-image: url(../img/header/Usuário.png);
+.menu__item--profile {
+  background-image: url(../img/header/user.png);
   background-size: 5em;
   margin-left: auto;
 }
@@ -55,7 +55,7 @@
     padding: 0 4.8em;
   }
 
-  .menu_logo {
+  .menu__logo {
     display: initial;
   }
 }
