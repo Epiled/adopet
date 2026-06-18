@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: url(../img/banner/shape-1.svg) no-repeat left top;
+  background: url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top;
 }
 
 .home__content {
@@ -52,8 +52,9 @@
 @media screen and (min-width: 1440px) {
   .home__container {
     background:
-      url(../img/banner/shape-1.svg) no-repeat left top / 56em,
-      url(../img/banner/shape-2.svg) no-repeat no-repeat right center / 13.4em;
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em,
+      url(../../assets/svg/icons-art/shape-2.svg) no-repeat no-repeat right
+        center / 13.4em;
   }
 
   .home__content {

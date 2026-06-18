@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 1.6em;
+  background-color: var(--color-accent);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  color: var(--color-neutral-white);
+  text-decoration: none;
+  filter: drop-shadow(0.2rem 0.2rem 0.4rem var(--color-shadow-25));
+  min-height: 4rem;
+  box-sizing: border-box;
+  border: 0;
+  min-width: 14.8rem;
+  align-self: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button--banner {
+  align-self: center;
+  max-width: 36.2rem;
+  width: 100%;
+}

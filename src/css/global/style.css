@@ -1,0 +1,40 @@
+@import url(./reset.css);
+
+@import url(../components/menu.css);
+@import url(../components/footer.css);
+@import url(../components/form.css);
+@import url(../components/pets.css);
+@import url(../components/banner.css);
+@import url(../components/button.css);
+
+@import url(../pages/register.css);
+@import url(../pages/login.css);
+@import url(../pages/home.css);
+
+:root {
+  --color-primary: #36d6ad;
+  --color-secondary: #3772ff;
+  --color-accent: #fc7071;
+
+  --color-background-main: #f7f7f7;
+  --color-surface-cream: #fcf0e3;
+  --color-surface-white: #ffffff;
+
+  --color-text-base: #737380;
+  --color-placeholder: #bcbcbc;
+
+  --color-neutral-black: #000000;
+  --color-neutral-white: #ffffff;
+
+  --color-shadow-15: #00000026;
+  --color-shadow-25: #00000040;
+
+  --font-family-primary: "Poppins", sans-serif;
+  --font-family-secondary: "IBM Plex Sans", sans-serif;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family-primary);
+}

@@ -3,10 +3,10 @@
   flex-direction: column;
   height: 100vh;
   background:
-    url(../img/banner/shape-1.svg) no-repeat left top,
-    url(../img/banner/shape-2.svg) no-repeat right center,
-    url(../img/banner/illustration.png) no-repeat center calc(100% - 9rem) /
-      24.7em,
+    url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top,
+    url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center,
+    url(../../assets/svg/icons-art/illustration.svg) no-repeat center
+      calc(100% - 9rem) / 24.7em,
     var(--color-secondary);
   font-family: var(--font-family-primary);
 }
@@ -30,7 +30,7 @@
   height: 4.6em;
 }
 
-.banner_title {
+.banner__title {
   font-family: var(--font-family-secondary);
   font-size: 2.6em;
   font-weight: 500;
@@ -65,7 +65,7 @@
     height: 6.2em;
   }
 
-  .banner_title {
+  .banner__title {
     font-size: 2.8em;
     margin: 4rem 0 2.4rem 0;
   }
