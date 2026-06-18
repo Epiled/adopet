@@ -6,6 +6,12 @@
   max-width: 34.4em;
 }
 
+.form--alter {
+  background: var(--color-surface-main);
+  padding: 3.2rem 1.6rem;
+  border-radius: 1rem;
+}
+
 .form__label {
   display: flex;
   flex-direction: column;
@@ -14,6 +20,12 @@
   color: var(--color-text-base);
   line-height: 2.4rem;
   gap: 1rem;
+}
+
+.form__label--brand {
+  color: var(--color-secondary);
+  font-weight: 600;
+  align-items: flex-start;
 }
 
 .form__input {
@@ -30,6 +42,14 @@
 .form__input::placeholder {
   color: var(--color-placeholder);
   text-align: center;
+}
+
+.form__input--alter {
+  background: var(--color-surface-white);
+}
+
+.form__input--alter::placeholder {
+  text-align: left;
 }
 
 .form__link {
