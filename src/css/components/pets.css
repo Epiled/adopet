@@ -48,7 +48,8 @@
   font-size: 1em;
   height: 1.8rem;
   padding-left: 2.6rem;
-  background: url(../img/pets/message.svg) no-repeat left center / 1.8rem;
+  background: url(../../assets/svg/icons-ui/message.svg) no-repeat left center /
+    1.8rem;
   box-sizing: border-box;
   text-decoration: none;
 }

@@ -30,22 +30,22 @@
   background-repeat: no-repeat;
 }
 
-.menu_link {
+.menu__link {
   display: inline-block;
   height: inherit;
   width: inherit;
 }
 
 .menu__item--house {
-  background-image: url(../img/header/house.svg);
+  background-image: url(../../assets/svg/icons-ui/house.svg);
 }
 
 .menu__item--email {
-  background-image: url(../img/header/messages.svg);
+  background-image: url(../../assets/svg/icons-ui/messages.svg);
 }
 
 .menu__item--profile {
-  background-image: url(../img/header/user.png);
+  background-image: url(../../assets/svg/icons-ui/user.svg);
   background-size: 5em;
   margin-left: auto;
 }

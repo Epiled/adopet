@@ -10,9 +10,10 @@
   flex-direction: column;
   flex: 1;
   background:
-    url(../img/banner/paws.svg) no-repeat right top,
-    url(../img/banner/shape-1.svg) no-repeat left top,
-    url(../img/banner/shape-3.svg) no-repeat left calc(100% - 3.2rem);
+    url(../../assets/svg/icons-art/paws.svg) no-repeat right top,
+    url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top,
+    url(../../assets/svg/icons-art/shape-3.svg) no-repeat left
+      calc(100% - 3.2rem);
 }
 
 .login__content {
@@ -43,9 +44,9 @@
 @media screen and (min-width: 768px) {
   .login__container {
     background:
-      url(../img/banner/paws.svg) no-repeat right top / 23em,
-      url(../img/banner/shape-1.svg) no-repeat left top / 56em,
-      url(../img/banner/shape-2.svg) no-repeat right center/ 13.4em;
+      url(../../assets/svg/icons-art/paws.svg) no-repeat right top / 23em,
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em,
+      url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center/ 13.4em;
   }
 
   .login__content {
