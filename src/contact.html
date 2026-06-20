@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="container home">
+  <body class="container contact" data-layout="default-tablet">
     <header class="menu">
       <nav class="menu__navigation">
         <img
@@ -36,68 +36,71 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
           <li class="menu__item menu__item--profile">
             <a
               class="menu__link"
-              href="#"
-              aria-label="Entrar em contato via e-mail"
-              aria-labelledby="Seu Perfil"
+              href="./profile.html"
+              aria-label="Entrar em seu Perfil"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="home__container">
-      <section class="home__content">
-        <p class="home__text">
+    <main class="container__main">
+      <section class="container__content" data-layout="default-tablet">
+        <p class="text">
           Envie uma mensagem para a pessoa ou instituição que está cuidando do
           animal:
         </p>
 
-        <form class="form form--alter" action="">
-          <label class="form__label form__label--brand" for="name"
-            >Nome
-            <input
-              id="name"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Insira seu nome completo"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="phone"
-            >Telefone
-            <input
-              id="phone"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Insira seu telefone e/ou whatsapp"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="animal-name"
-            >Nome do animal
-            <input
-              id="animal-name"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Por qual animal você se interessou?"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="message"
-            >Mensagem
-            <input
-              id="message"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Escreva sua mensagem."
-            />
-          </label>
+        <form id="contact-form" class="form form--alter" action="./home.html">
+          <div class="form__fields">
+            <label class="form__label form__label--brand" for="name"
+              >Nome
+              <input
+                id="name"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Insira seu nome completo"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="phone"
+              >Telefone
+              <input
+                id="phone"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Insira seu telefone e/ou whatsapp"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="animal-name"
+              >Nome do animal
+              <input
+                id="animal-name"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Por qual animal você se interessou?"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="message"
+              >Mensagem
+              <input
+                id="message"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Escreva sua mensagem."
+              />
+            </label>
+          </div>
 
-          <button class="button" type="submit">Enviar</button>
+          <button class="button" type="submit" form="contact-form">
+            Enviar
+          </button>
         </form>
       </section>
     </main>
@@ -105,7 +108,5 @@
     <footer class="footer">
       <p class="footer__text">2022 - Desenvolvido por Alura.</p>
     </footer>
-
-    <script type="module" src="./js/list.js"></script>
   </body>
 </html>

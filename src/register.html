@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>register - Adopet</title>
+    <title>Cadastro - Adopet</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="register">
+  <body class="container" data-layout="default">
     <header class="menu">
       <nav class="menu__navigation">
         <img
           class="menu__logo"
-          src="./assets/svg/logos/logo-blue.svg"
+          src="./assets/svg/logos/logo.svg"
           alt="Logo - Adopet"
           width="128"
           height="31"
@@ -36,17 +36,18 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="register__container">
-      <section class="register__content">
+
+    <main class="container__main">
+      <section class="container__content register__content">
         <img
-          class="register__logo"
+          class="logo"
           src="./assets/svg/logos/logo-blue.svg"
           alt="Adopet"
           width="260"
@@ -54,48 +55,54 @@
         />
 
         <div class="register__texts">
-          <p class="register__text">Ainda não tem register?</p>
-          <p class="register__text">
+          <p class="text">Ainda não tem register?</p>
+          <p class="text">
             Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
           </p>
         </div>
 
-        <form class="form" action="">
-          <label class="form__label" for=""
+        <form id="register-form" class="form" action="login.html">
+          <label class="form__label" for="email"
             >Email
             <input
+              id="email"
               class="form__input"
               type="text"
               placeholder="Escolha seu melhor email"
             />
           </label>
-          <label class="form__label" for=""
+          <label class="form__label" for="name"
             >Nome
             <input
+              id="name"
               class="form__input"
               type="text"
               placeholder="Digite seu nome completo"
             />
           </label>
-          <label class="form__label" for=""
+          <label class="form__label" for="password"
             >Senha
             <input
+              id="password"
               class="form__input form__password"
               type="text"
               placeholder="Crie uma senha"
             />
           </label>
-          <label class="form__label" for=""
+          <label class="form__label" for="confim-password"
             >Confirma sua senha
             <input
+              id="confim-password"
               class="form__input form__password"
               type="text"
               placeholder="Repita a senha criada acima"
             />
           </label>
-
-          <button class="button" type="submit">Cadastrar</button>
         </form>
+
+        <button class="button" type="submit" form="register-form">
+          Cadastrar
+        </button>
       </section>
     </main>
 

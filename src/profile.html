@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="container profile">
+  <body class="container profile" data-layout="default-tablet">
     <header class="menu">
       <nav class="menu__navigation">
         <img
@@ -36,89 +36,89 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
           <li class="menu__item menu__item--profile">
             <a
               class="menu__link"
-              href="#"
-              aria-label="Entrar em contato via e-mail"
-              aria-labelledby="Seu Perfil"
+              href="./profile.html"
+              aria-label="Entrar em seu Perfil"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="profile__container">
-      <section class="profile__content">
-        <p class="profile__text">
+    <main class="container__main">
+      <section class="container__content" data-layout="default-tablet">
+        <p class="text">
           Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua
           mensagem.
         </p>
 
-        <form class="form form--alter" action="">
-          <h2 class="form__title">Perfil</h2>
+        <form class="form form--alter" action="./home.html">
+          <div class="form__fields">
+            <h2 class="form__title">Perfil</h2>
 
-          <label class="form__label form__label--brand" for="photo"
-            >Foto
-            <div class="form__box">
-              <img
-                class="form__photo"
-                src="./assets/svg/icons-ui/user.svg"
-                alt=""
+            <label class="form__label form__label--brand" for="photo"
+              >Foto
+              <div class="form__box form__box--alter">
+                <img
+                  class="form__photo"
+                  src="./assets/svg/icons-ui/user.svg"
+                  alt=""
+                />
+                <button class="form__link form__link--alter">
+                  Clique na foto para editar
+                </button>
+              </div>
+              <input
+                id="photo"
+                class="form__input form__input--alter hidden"
+                type="file"
+                placeholder="Envie sua foto"
+                alt="Envie uma imagem aqui"
               />
-              <button class="form__link form__link--alter">
-                Clique na foto para editar
-              </button>
-            </div>
-            <input
-              id="photo"
-              class="form__input form__input--alter hidden"
-              type="file"
-              placeholder="Envie sua foto"
-              alt="Envie uma imagem aqui"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="name"
-            >Nome
-            <input
-              id="name"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Insira seu nome completo"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="phone"
-            >Telefone
-            <input
-              id="phone"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Insira seu telefone e/ou whatsapp"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="city"
-            >Cidade
-            <input
-              id="city"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Insira sua cidade"
-            />
-          </label>
-          <label class="form__label form__label--brand" for="about"
-            >Sobre
-            <input
-              id="about"
-              class="form__input form__input--alter"
-              type="text"
-              placeholder="Escreva um pouco sobre você."
-            />
-          </label>
-
+            </label>
+            <label class="form__label form__label--brand" for="name"
+              >Nome
+              <input
+                id="name"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Insira seu nome completo"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="phone"
+              >Telefone
+              <input
+                id="phone"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Insira seu telefone e/ou whatsapp"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="city"
+              >Cidade
+              <input
+                id="city"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Insira sua cidade"
+              />
+            </label>
+            <label class="form__label form__label--brand" for="about"
+              >Sobre
+              <input
+                id="about"
+                class="form__input form__input--alter"
+                type="text"
+                placeholder="Escreva um pouco sobre você."
+              />
+            </label>
+          </div>
           <button class="button" type="submit">Salvar</button>
         </form>
       </section>
@@ -127,7 +127,5 @@
     <footer class="footer">
       <p class="footer__text">2022 - Desenvolvido por Alura.</p>
     </footer>
-
-    <script type="module" src="./js/list.js"></script>
   </body>
 </html>

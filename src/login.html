@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="login">
+  <body class="container" data-layout="default">
     <header class="menu">
       <nav class="menu__navigation">
         <img
@@ -36,47 +36,51 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="login__container">
-      <section class="login__content">
+
+    <main class="container__main">
+      <section class="container__content login__content">
         <img
-          class="login__logo"
+          class="logo"
           src="./assets/svg/logos/logo-blue.svg"
           alt="Adopet"
           width="260"
           height="64"
         />
 
-        <p class="login__text">Já tem conta? Faça seu login:</p>
+        <p class="text">Já tem conta? Faça seu login:</p>
 
-        <form class="form" action="home.html">
+        <form id="login-form" class="form" action="home.html">
           <label class="form__label" for=""
             >Email
             <input
               class="form__input form__email"
               type="text"
-              placeholder="Escolha seu melhor email"
-            />
-          </label>
-          <label class="form__label" for=""
-            >Senha
-            <input
-              class="form__input form__password"
-              type="text"
-              placeholder="Crie uma senha"
+              placeholder="Insira seu email"
             />
           </label>
 
-          <a class="form__link" href="#">Esqueci minha senha.</a>
+          <div class="form__box">
+            <label class="form__label" for=""
+              >Senha
+              <input
+                class="form__input form__password"
+                type="text"
+                placeholder="Insira sua senha"
+              />
+            </label>
 
-          <button class="button" type="submit">Entrar</button>
+            <a class="form__link" href="#">Esqueci minha senha.</a>
+          </div>
         </form>
+
+        <button class="button" type="submit" form="login-form">Entrar</button>
       </section>
     </main>
 
