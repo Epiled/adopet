@@ -8,5 +8,6 @@
 
 .footer__text {
   font-size: 1.6em;
+  line-height: 2.4rem;
   color: var(--color-neutral-white);
 }

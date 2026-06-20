@@ -1,0 +1,16 @@
+.text {
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.text--alter {
+  color: var(--color-neutral-white);
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 1.8em;
+  }
+}

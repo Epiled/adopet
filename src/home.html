@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="container home">
+  <body class="container home" data-layout="default-desktop">
     <header class="menu">
       <nav class="menu__navigation">
         <img
@@ -36,24 +36,24 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
           <li class="menu__item menu__item--profile">
             <a
               class="menu__link"
-              href="#"
-              aria-label="Entrar em contato via e-mail"
-              aria-labelledby="Seu Perfil"
+              href="./profile.html"
+              aria-label="Entrar em seu Perfil"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="home__container">
-      <section class="home__content">
-        <p class="home__text">Olá! Veja os amigos disponíveis para adoção!</p>
+
+    <main class="container__main">
+      <section class="container__content home__content">
+        <p class="text">Olá! Veja os amigos disponíveis para adoção!</p>
 
         <ul class="pets" data-list-pets>
           <li class="pets__item">
