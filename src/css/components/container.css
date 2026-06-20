@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 100vh;
+  background: url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top
+    var(--color-surface-white);
+}
+
+.container[data-layout="default"] {
+  background:
+    url(../../assets/svg/icons-art/paws.svg) no-repeat right top / auto 24.4rem,
+    url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top,
+    url(../../assets/svg/icons-art/shape-3.svg) no-repeat left
+      calc(100% - 13.6rem),
+    var(--color-surface-white);
+}
+
+.container[data-layout="brand"] {
+  background:
+    url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top,
+    url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
+      41.5rem,
+    url(../../assets/svg/icons-art/illustration.svg) no-repeat center
+      calc(100% - 9rem) / 24.7em,
+    var(--color-secondary);
+}
+
+.container__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  flex: 1;
+  padding: 16.8em 2.4rem 0 2.4rem;
+}
+
+.container__content[data-layout="default-tablet"] {
+  margin: 0 auto;
+  max-width: 52.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    gap: 3.2rem;
+    background-size: 56em;
+  }
+
+  .container[data-layout="default"] {
+    background:
+      url(../../assets/svg/icons-art/paws.svg) no-repeat right top / auto
+        37.4rem,
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
+        66.4rem,
+      var(--color-surface-white);
+  }
+
+  .container[data-layout="default-tablet"] {
+    background:
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
+        66.4rem,
+      var(--color-surface-white);
+  }
+
+  .container[data-layout="brand"] {
+    background-size:
+      56em auto,
+      auto 66.4rem,
+      33.8em;
+  }
+
+  .container__content {
+    padding: 25em 3.2em 0 3.2em;
+    gap: 4rem;
+  }
+
+  .container__content[data-layout="default-tablet"] {
+    padding: 28.6em 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container[data-layout="default"] {
+    background-size:
+      auto 40.7rem,
+      56em auto,
+      auto 66.4rem;
+  }
+
+  .container[data-layout="default-tablet"],
+  .container[data-layout="default-desktop"] {
+    background:
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
+        66.4rem,
+      var(--color-surface-white);
+  }
+
+  .container__content {
+    padding: 13em 3.2em 0 3.2em;
+  }
+
+  .container__content[data-layout="default-tablet"] {
+    padding: 20.4em 0 0 0;
+    max-width: 55.2em;
+  }
+}
