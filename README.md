@@ -1,4 +1,4 @@
-<!-- ![Social Preview](./design/github/social-preview/social-preview.png) -->
+![Social Preview](./design/github/social-preview.png)
 
 <h1 align="center"> 🐕 Adopet 🐈 </h1>
 
@@ -27,7 +27,7 @@
 
 ## 📖 Overview
 
-Coming Soon!
+Adopet is a streamlined web platform created to facilitate the connection between animal rescue organizations and individuals looking to adopt pets. This repository contains the static frontend implementation of the application, structured for rapid development, accessibility, and clean code organization.
 
 ## 🛠 Technologies
 
@@ -43,7 +43,9 @@ Coming Soon!
 
 ## 🚀 Demo
 
-Coming Soon!
+Access the live application below to interact with the interface and run your own performance tests
+
+Adopet: [https://adopet-plum.vercel.app/](https://adopet-plum.vercel.app/)
 
 ### Desktop
 
@@ -63,17 +65,36 @@ git clone https://github.com/Epiled/adopet.git
 cd adopet
 ```
 
-### Local Execution
+2. Install the dependencies:
+```bash
+npm install
+```
 
-To view and interact with the project, simply open the index.html file in your preferred web browser. You can do this by double-clicking the file in your file explorer or dragging it into an open browser tab.
+3. Run the development environment (Build + Watch + Server):
+```bash
+npm run dev
+```
 
 ## 📂 File Structure
 
-Coming Soon!
+Below is the project architecture. All development should be done inside the src/ folder
+
+```
+adopet/
+├── design/                  # Wireframes, videos and assets for documentation
+├── src/                     # Main source code (Development)
+│   ├── assets/              # Original images and icons
+│   ├── css/                 # Styles following architecture BEM
+│   └── js/                  # UI logic and PWA registration
+├── index.html               # Base semantic structure and main markup
+└── package.json             # Project dependencies and npm scripts
+```
 
 ## 🎨 Reference & Inspiration
 
-Coming Soon!
+The project's design and wireframes are available for viewing on Figma. Below is a list of the real-world examples that inspired the UI/UX design.
+
+Figma / Wireframe: [Adopet](https://www.figma.com/design/onpZvSTZ8jnNmuZQ5KW7YI/Challenge-Front-end-%7C-Adopet--Community-?node-id=518-11&t=dojyhrCm0TKEecn8-1)
 
 ## 👨‍💻 Author and Contact
 
