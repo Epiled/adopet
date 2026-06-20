@@ -4,7 +4,8 @@
   "description": "Site sobre adoção de pets",
   "main": "index.html",
   "scripts": {
-    "dev": "browser-sync start --server --files '*.html, css/*.css, js/*.js'",
+    "dev": "browser-sync start --server src --files 'src/*.html, src/css/*.css, src/js/*.js'",
+    "tree-cli": "npx tree-cli -l 5 -a --markdown --ignore node_modules/,dist/,build/,.git/,.next/,coverage/,out/,tmp/,temp/ ./ -o structure.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
     "browser-sync": "^3.0.4",
     "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "tree-cli": "^0.6.7"
   }
 }
