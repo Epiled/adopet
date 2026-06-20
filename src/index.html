@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/global/style.css" />
   </head>
 
-  <body class="banner">
+  <body class="container" data-layout="brand">
     <header class="menu">
       <nav class="menu__navigation">
         <img
@@ -36,31 +36,34 @@
           <li class="menu__item menu__item--email">
             <a
               class="menu__link"
-              href="#"
+              href="./contact.html"
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="banner__container">
-      <section class="banner__content">
+
+    <main class="container__main">
+      <section class="container__content initial__content">
         <img
-          class="banner__logo"
+          class="logo logo--alter"
           src="./assets/svg/logos/logo.svg"
           alt="Adopet"
           width="260"
           height="64"
         />
 
-        <h1 class="banner__title">Boas-vindas!</h1>
+        <div class="initial__texts">
+          <h1 class="initial__title">Boas-vindas!</h1>
 
-        <p class="banner__text">
-          Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
-          gente!
-        </p>
+          <p class="text text--alter">
+            Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
+            gente!
+          </p>
+        </div>
 
-        <div class="banner__buttons">
+        <div class="initial__buttons">
           <a class="button button--banner" href="./login.html"
             >Já tenho conta</a
           >
