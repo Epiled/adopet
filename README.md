@@ -48,12 +48,10 @@ Access the live application below to interact with the interface and run your ow
 Adopet: [https://adopet-plum.vercel.app/](https://adopet-plum.vercel.app/)
 
 ### Desktop
-
-Coming Soon!
+[desktop.mp4](https://github.com/user-attachments/assets/737f4718-bb20-4473-ade7-557617f57427)
 
 ### Mobile
-
-Coming Soon!
+[mobile.mp4](https://github.com/user-attachments/assets/b7c6794a-2f3c-47b7-b1fc-924c28e9f65c)
 
 ## 📦 Install and Use
 
