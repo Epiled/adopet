@@ -1,4 +1,4 @@
-![Social Preview](./design/github/social-preview.png)
+![Social Preview](./design/github/social-preview/social-preview.png)
 
 <h1 align="center"> 🐕 Adopet 🐈 </h1>
 
@@ -39,23 +39,23 @@ The following technologies were used to build this project:
 
 ## ⚡ Performance & PWA
 
-Coming Soon!
+![Lighthouse Performance](./design/github/lighthouse-report/lighthouse-report-light.png)
 
 ## 🚀 Demo
 
-Access the live application below to interact with the interface and run your own performance tests
+Access the live application below to interact with the interface and run your own performance tests.
 
 Adopet: [https://adopet-plum.vercel.app/](https://adopet-plum.vercel.app/)
 
 ### Desktop
-[desktop.mp4](https://github.com/user-attachments/assets/737f4718-bb20-4473-ade7-557617f57427)
+[desktop.webm](https://github.com/user-attachments/assets/737f4718-bb20-4473-ade7-557617f57427)
 
 ### Mobile
-[mobile.mp4](https://github.com/user-attachments/assets/b7c6794a-2f3c-47b7-b1fc-924c28e9f65c)
+[mobile..webm](https://github.com/user-attachments/assets/b7c6794a-2f3c-47b7-b1fc-924c28e9f65c)
 
 ## 📦 Install and Use
 
-This project currently operates without a local development server or build step, meaning it can be run directly from your file system.
+**Prerequisites:** Node.js (v22.x) or higher installed.
 
 1. Clone the repository:
 ```bash
