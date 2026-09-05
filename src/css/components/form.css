@@ -80,6 +80,18 @@
   text-align: left;
 }
 
+.form__input--text {
+  resize: vertical;
+}
+
+.form__input--profile {
+  min-height: 10.4rem;
+}
+
+.form__input--contact {
+  min-height: 17.2rem;
+}
+
 .form__link {
   color: var(--color-accent);
   font-size: 1.2em;
