@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Adopet</title>
 
+    <meta property="og:title" content="Pets para adoção - Adopet" />
+    <meta
+      property="og:description"
+      content="Encontre cães e gatos disponíveis para adoção e conheça o próximo companheiro para sua família."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/Epiled/adopet/raw/master/design/github/social-preview/social-preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://adopet-plum.vercel.app/home.html"
+    />
+    <meta property="og:type" content="website" />
+
     <meta
       name="description"
       content="Explore nossa lista de cães e gatos disponíveis para adoção. Conheça as histórias de cada pet e encontre o companheiro ideal para o seu lar no Adopet."
     />
+
+    <link rel="canonical" href="https://adopet-plum.vercel.app/home.html" />
 
     <link rel="icon" href="./assets/favicon/favicon.svg" type="image/svg+xml" />
 
@@ -60,10 +77,9 @@
 
     <main class="container__main">
       <section class="container__content home__content">
-        <p class="text">Olá! Veja os amigos disponíveis para adoção!</p>
+        <h1 class="text">Olá! Veja os amigos disponíveis para adoção!</h1>
 
-        <span class="text" data-pets-status aria-live="polite"
-          ></span>
+        <span class="text" data-pets-status aria-live="polite"></span>
 
         <ul class="pets" data-list-pets></ul>
       </section>
