@@ -38,7 +38,8 @@ setTimeout(() => {
     statusPets.textContent = "Pets carregados";
     statusPets.classList.add("sr-only");
   } else {
-    containerPets.innerHTML =
-      "<span class='text pets__fallback'>Nenhum pet encontrado.</span>";
+    statusPets.classList.add("pets__fallback");
+    statusPets.textContent =
+      "Nenhum pet encontrado.";
   }
 }, 1000);
