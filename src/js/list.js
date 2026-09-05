@@ -32,7 +32,7 @@ containerPets.innerHTML =
   "<span class='text'>Carregando pets<span class='pets__dots'></span></span>";
 
 setTimeout(() => {
-  if (list.length === 0) {
+  if (list.length !== 0) {
     containerPets.innerHTML = listRender;
   } else {
     containerPets.innerHTML =
