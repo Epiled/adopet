@@ -10,7 +10,7 @@ if (!containerPets || !statusPets) {
 const listRender = list
   .map((item) => {
     return `<li class="pets__item">
-              <img class="pets__image" src="./assets/img/pets/${item.image}" width="650" height="650" alt="${item.description}">
+              <img class="pets__image" src="./assets/img/pets/${item.image}" width="650" height="650" alt="${item.description}" loading="lazy">
               <div class="pets__data">
                 <div>
                   <h2 class="pets__name">${item.name}</h2>
@@ -39,7 +39,6 @@ setTimeout(() => {
     statusPets.classList.add("sr-only");
   } else {
     statusPets.classList.add("pets__fallback");
-    statusPets.textContent =
-      "Nenhum pet encontrado.";
+    statusPets.textContent = "Nenhum pet encontrado.";
   }
 }, 1000);
