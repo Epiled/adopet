@@ -83,8 +83,8 @@ adopet/
 ├── src/                     # Main source code (Development)
 │   ├── assets/              # Original images and icons
 │   ├── css/                 # Styles following architecture BEM
-│   └── js/                  # UI logic and PWA registration
-├── index.html               # Base semantic structure and main markup
+│   ├── js/                  # UI logic and PWA registration
+│   └── index.html           # Base semantic structure and main markup
 └── package.json             # Project dependencies and npm scripts
 ```
 
