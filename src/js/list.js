@@ -41,4 +41,4 @@ setTimeout(() => {
     containerPets.innerHTML =
       "<span class='text pets__fallback'>Nenhum pet encontrado.</span>";
   }
-}, 2000);
+}, 1000);
