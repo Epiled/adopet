@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Perfil - Adopet</title>
 
     <meta
@@ -60,10 +61,10 @@
 
     <main class="container__main">
       <section class="container__content" data-layout="default-tablet">
-        <p class="text">
+        <h1 class="text">
           Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua
           mensagem.
-        </p>
+        </h1>
 
         <form class="form form--alter" action="./home.html">
           <div class="form__fields">
@@ -83,7 +84,7 @@
               </div>
               <input
                 id="photo"
-                class="form__input form__input--alter hidden"
+                class="form__input form__input--alter sr-only"
                 type="file"
                 placeholder="Envie sua foto"
               />
@@ -95,6 +96,7 @@
                 class="form__input form__input--alter"
                 type="text"
                 placeholder="Insira seu nome completo"
+                autocomplete="name"
               />
             </label>
             <label class="form__label form__label--brand" for="phone"
@@ -102,8 +104,9 @@
               <input
                 id="phone"
                 class="form__input form__input--alter"
-                type="text"
+                type="tel"
                 placeholder="Insira seu telefone e/ou whatsapp"
+                autocomplete="tel"
               />
             </label>
             <label class="form__label form__label--brand" for="city"
@@ -113,13 +116,14 @@
                 class="form__input form__input--alter"
                 type="text"
                 placeholder="Insira sua cidade"
+                autocomplete="address-level2"
               />
             </label>
             <label class="form__label form__label--brand" for="about"
               >Sobre
               <textarea
                 id="about"
-                class="form__input form__input--alter"
+                class="form__input form__input--alter form__input--text form__input--profile"
                 placeholder="Escreva um pouco sobre você."
               ></textarea>
             </label>

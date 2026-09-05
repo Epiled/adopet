@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Login - Adopet</title>
 
     <meta
@@ -65,7 +66,7 @@
           height="64"
         />
 
-        <p class="text">Já tem conta? Faça seu login:</p>
+        <h1 class="text">Já tem conta? Faça seu login:</h1>
 
         <form id="login-form" class="form" action="home.html">
           <label class="form__label" for="email"
@@ -73,8 +74,10 @@
             <input
               id="email"
               class="form__input form__email"
-              type="text"
+              type="email"
               placeholder="Insira seu email"
+              autocomplete="email"
+              required
             />
           </label>
 
@@ -86,6 +89,8 @@
                 class="form__input form__password"
                 type="password"
                 placeholder="Insira sua senha"
+                autocomplete="current-password"
+                required
               />
             </label>
 

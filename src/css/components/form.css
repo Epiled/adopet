@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 2.4rem;
   width: 100%;
-  max-width: 31.2em;
+  max-width: 31.2rem;
 }
 
 .form--alter {
@@ -35,7 +35,6 @@
 .form__title {
   color: var(--color-text-base);
   font-size: 2.1rem;
-  font-weight: 2.4rem;
   font-weight: 600;
   text-align: center;
 }
@@ -62,7 +61,6 @@
   background: var(--color-background-main);
   height: 4rem;
   padding: 1.2rem 1.6rem;
-  box-sizing: border-box;
   border-radius: 0.6rem;
   box-shadow: 0 0.2rem 0.2rem var(--color-shadow-15);
   border: 0;
@@ -82,15 +80,23 @@
   text-align: left;
 }
 
+.form__input--text {
+  resize: vertical;
+}
+
+.form__input--profile {
+  min-height: 10.4rem;
+}
+
+.form__input--contact {
+  min-height: 17.2rem;
+}
+
 .form__link {
   color: var(--color-accent);
   font-size: 1.2em;
   line-height: 2.4rem;
   text-align: center;
-}
-
-.form__link:hover {
-  cursor: pointer;
 }
 
 .form__link--alter {
