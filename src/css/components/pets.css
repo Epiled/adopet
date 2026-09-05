@@ -50,7 +50,6 @@
   padding-left: 2.6rem;
   background: url(../../assets/svg/icons-ui/message.svg) no-repeat left center /
     1.8rem;
-  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -67,8 +66,7 @@
 }
 
 @keyframes loading-dots {
-  0%,
-  33% {
+  0% {
     content: ".";
   }
 
