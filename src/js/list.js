@@ -28,4 +28,14 @@ const listRender = list
   })
   .join("");
 
-containerPets.innerHTML = listRender;
+containerPets.innerHTML =
+  "<span class='text'>Carregando pets<span class='pets__dots'></span></span>";
+
+setTimeout(() => {
+  if (list.length === 0) {
+    containerPets.innerHTML = listRender;
+  } else {
+    containerPets.innerHTML =
+      "<span class='text pets__fallback'>Nenhum pet encontrado.</span>";
+  }
+}, 1000);
