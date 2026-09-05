@@ -54,6 +54,33 @@
   text-decoration: none;
 }
 
+.pets__dots::after {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  text-align: left;
+  animation: loading-dots 1s steps(1) infinite;
+}
+
+.pets__fallback {
+  color: var(--color-accent);
+}
+
+@keyframes loading-dots {
+  0%,
+  33% {
+    content: ".";
+  }
+
+  33% {
+    content: "..";
+  }
+
+  66% {
+    content: "...";
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pets {
     grid-template-columns: repeat(2, 1fr);
