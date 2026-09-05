@@ -4,7 +4,7 @@
   "description": "Site sobre adoção de pets",
   "main": "index.html",
   "scripts": {
-    "dev": "browser-sync start --server src --files 'src/**/*.{html,css,js}'",
+    "dev": "browser-sync start --server src --files src/*.html, src/css/*.css, src/js/*.js",
     "tree-cli": "npx tree-cli -l 5 -a --markdown --ignore node_modules/,dist/,build/,.git/,.next/,coverage/,out/,tmp/,temp/ ./ -o structure.md",
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
