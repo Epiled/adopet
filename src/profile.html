@@ -77,7 +77,7 @@
                   src="./assets/svg/icons-ui/user.svg"
                   alt=""
                 />
-                <button class="form__link form__link--alter">
+                <button type="button" class="form__link form__link--alter">
                   Clique na foto para editar
                 </button>
               </div>
@@ -86,7 +86,6 @@
                 class="form__input form__input--alter hidden"
                 type="file"
                 placeholder="Envie sua foto"
-                alt="Envie uma imagem aqui"
               />
             </label>
             <label class="form__label form__label--brand" for="name"
@@ -118,12 +117,11 @@
             </label>
             <label class="form__label form__label--brand" for="about"
               >Sobre
-              <input
+              <textarea
                 id="about"
                 class="form__input form__input--alter"
-                type="text"
                 placeholder="Escreva um pouco sobre você."
-              />
+              ></textarea>
             </label>
           </div>
           <button class="button" type="submit">Salvar</button>
