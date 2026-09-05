@@ -6,7 +6,7 @@ const pets = [
     size: "Porte pequeno",
     behavior: "Calmo e educado",
     address: "Rio de Janeiro (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorro Dunga, de pelagem bege, preta e branca",
   },
   {
@@ -16,7 +16,7 @@ const pets = [
     size: "Porte pequeno",
     behavior: "Ativa e carinhosa",
     address: "Nova Iguaçu (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorra Felícia, de pelagem cinza, preta e branca",
   },
   {
@@ -26,7 +26,7 @@ const pets = [
     size: "Porte grande",
     behavior: "Ativo e educado",
     address: "Duque de Caixas (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorro Sirius, de pelagem preta e branca",
   },
   {
@@ -36,7 +36,7 @@ const pets = [
     size: "Porte pequeno",
     behavior: "Calma e carinhosa",
     address: "São Gonçalo (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorra Fiona, de pelagem preta e branca",
   },
   {
@@ -46,7 +46,7 @@ const pets = [
     size: "Porte médio/grande",
     behavior: "Brincalhão e amável",
     address: "Rio de Janeiro (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorro Sid, de pelagem marrom e branca",
   },
   {
@@ -56,7 +56,7 @@ const pets = [
     size: "Porte médio",
     behavior: "Ativo e carinhoso",
     address: "Nova Iguaçu (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description:
       "Cachorro Yoda, de pelagem bege escura com listras pretas e brancas",
   },
@@ -67,7 +67,7 @@ const pets = [
     size: "Porte médio",
     behavior: "Ativa e carinhosa",
     address: "Duque de Caixas (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorra Lua, de pelagem cinza e branca",
   },
   {
@@ -77,7 +77,7 @@ const pets = [
     size: "Porte grande",
     behavior: "Calma e carinhosa",
     address: "São Gonçalo (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorra Amora, de pelagem bege e preta",
   },
   {
@@ -87,7 +87,7 @@ const pets = [
     size: "Porte médio",
     behavior: "Ativa e amável",
     address: "Rio de Janeiro (RJ)",
-    contact: "(11) 9 1234-5678",
+    contact: "tel:+5511912345678",
     description: "Cachorra Zelda, de pelagem laranja e branca",
   },
 ];
