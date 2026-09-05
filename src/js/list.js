@@ -1,9 +1,10 @@
 import list from "./mocks/pets.js";
 
 const containerPets = document.querySelector("[data-list-pets]");
+const statusPets = document.querySelector("[data-pets-status]");
 
-if (!containerPets) {
-  throw new Error("Pets container not found");
+if (!containerPets || !statusPets) {
+  throw new Error("Pets elements not found");
 }
 
 const listRender = list
@@ -28,4 +29,16 @@ const listRender = list
   })
   .join("");
 
-containerPets.innerHTML = listRender;
+statusPets.innerHTML = `Carregando pets<span class='pets__dots'></span
+        >`;
+
+setTimeout(() => {
+  if (list.length !== 0) {
+    containerPets.innerHTML = listRender;
+    statusPets.textContent = "Pets carregados";
+    statusPets.classList.add("sr-only");
+  } else {
+    containerPets.innerHTML =
+      "<span class='text pets__fallback'>Nenhum pet encontrado.</span>";
+  }
+}, 2000);
