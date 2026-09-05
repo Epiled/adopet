@@ -1,6 +1,6 @@
 # 🖼 PWA Images and Icons - Documentation
 
-This guide explains dimensions and orientations to generate screenshot images and icons for the [Project-Name] PWA.
+This guide explains dimensions and orientations to generate screenshot images and icons for the Adopet PWA.
 
 ## Technical Requirements
 
