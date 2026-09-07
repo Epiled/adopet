@@ -92,6 +92,22 @@
   min-height: 17.2rem;
 }
 
+.form__input:where([data-state="error"]) {
+  border: 0.1rem solid var(--color-accent);
+}
+
+.form__feedback {
+  display: none;
+}
+
+.form__feedback:where([data-state="visible"]) {
+  display: block;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
 .form__link {
   color: var(--color-accent);
   font-size: 1.2em;
