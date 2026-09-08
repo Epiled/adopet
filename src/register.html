@@ -73,53 +73,109 @@
           </p>
         </div>
 
-        <form id="register-form" class="form" action="login.html">
-          <label class="form__label" for="email"
-            >Email
-            <input
-              id="email"
-              class="form__input"
-              type="email"
-              placeholder="Escolha seu melhor email"
-              autocomplete="email"
-              required
-            />
-          </label>
-          <label class="form__label" for="name"
-            >Nome
-            <input
-              id="name"
-              class="form__input"
-              type="text"
-              placeholder="Digite seu nome completo"
-              autocomplete="name"
-              required
-            />
-          </label>
-          <label class="form__label" for="password"
-            >Senha
-            <input
-              id="password"
-              class="form__input form__password"
-              type="password"
-              placeholder="Crie uma senha"
-              required
-            />
-          </label>
-          <label class="form__label" for="confim-password"
-            >Confirma sua senha
-            <input
-              id="confim-password"
-              class="form__input form__password"
-              type="password"
-              placeholder="Repita a senha criada acima"
-              autocomplete="new-password"
-              required
-            />
-          </label>
+        <form novalidate id="register-form" data-register-form class="form">
+          <div class="form__box">
+            <label class="form__label" for="email"
+              >Email
+              <input
+                id="email"
+                class="form__input"
+                type="email"
+                name="email"
+                placeholder="Escolha seu melhor email"
+                autocomplete="email"
+                data-field
+                data-state="default"
+                required
+              />
+            </label>
+            <span
+              class="form__feedback"
+              data-error="email"
+              data-state="hidden"
+            ></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="name"
+              >Nome
+              <input
+                id="name"
+                class="form__input"
+                type="text"
+                name="name"
+                placeholder="Digite seu nome completo"
+                autocomplete="name"
+                data-field
+                data-state="default"
+                required
+              />
+            </label>
+            <span
+              class="form__feedback"
+              data-error="name"
+              data-state="hidden"
+            ></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="password"
+              >Senha
+              <input
+                id="password"
+                class="form__input form__password"
+                type="password"
+                name="password"
+                placeholder="Crie uma senha"
+                autocomplete="new-password"
+                data-field
+                data-state="default"
+                required
+              />
+            </label>
+            <span
+              class="form__feedback"
+              data-error="password"
+              data-state="hidden"
+            ></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="confirmPassword"
+              >Confirma sua senha
+              <input
+                id="confirmPassword"
+                class="form__input form__password"
+                type="password"
+                name="confirmPassword"
+                placeholder="Repita a senha criada acima"
+                autocomplete="new-password"
+                data-field
+                data-state="default"
+                required
+              />
+            </label>
+            <span
+              class="form__feedback"
+              data-error="confirmPassword"
+              data-state="hidden"
+            ></span>
+          </div>
+
+          <span
+            class="form__feedback"
+            data-error="register"
+            data-state="hidden"
+          ></span>
         </form>
 
-        <button class="button" type="submit" form="register-form">
+        <button
+          class="button"
+          type="submit"
+          form="register-form"
+          data-button-form
+          data-state="default"
+        >
           Cadastrar
         </button>
       </section>
@@ -128,5 +184,8 @@
     <footer class="footer">
       <p class="footer__text">2022 - Desenvolvido por Alura.</p>
     </footer>
+
+    <script type="module" src="./js/database.js"></script>
+    <script type="module" src="./js/register.js"></script>
   </body>
 </html>
