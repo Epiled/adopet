@@ -39,7 +39,7 @@ form.addEventListener("submit", (e) => {
 });
 
 async function register(dto) {
-  const feedbackContainer = form.querySelector("[data-error='register']");
+  const feedbackContainer = form.querySelector("[data-feedback='register']");
 
   feedbackContainer.dataset.state = "hidden";
   feedbackContainer.textContent = "";
@@ -69,7 +69,7 @@ async function register(dto) {
 
     if (match) {
       throw new Error(
-        "Não foi possível realizar o cadastro, email já registrado",
+        "Não foi possível realizar o cadastro, email já registrado.",
       );
     }
 

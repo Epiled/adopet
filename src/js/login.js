@@ -37,7 +37,7 @@ form.addEventListener("submit", (e) => {
 });
 
 async function login(dto) {
-  const feedbackContainer = form.querySelector("[data-error='login']");
+  const feedbackContainer = form.querySelector("[data-feedback='login']");
 
   feedbackContainer.dataset.state = "hidden";
   feedbackContainer.textContent = "";
