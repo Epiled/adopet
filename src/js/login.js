@@ -1,29 +1,13 @@
+import { checkInput } from "./validation/validation.js";
+
 const form = document.querySelector("[data-login-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
 const timeout = 1000;
 
-const errorsTypes = ["valueMissing", "typeMismatch", "tooShort", "customError"];
-
-const errorsFeedback = {
-  email: {
-    valueMissing: "O campo de e-mail não pode estar vazio.",
-    typeMismatch: "Por favor, preencha um e-mail válido.",
-    tooShort: "Por favor, preencha um e-mail válido. Ex: email@contato.com",
-    customError:
-      "Não foi possível realizar o login, verifique os campos e-mail e senha",
-  },
-  password: {
-    valueMissing: "O campo de senha não pode estar vazio.",
-    tooShort: "Por favor, preencha um senha válido.",
-    customError:
-      "Não foi possível realizar o login, verifique os campos e-mail e senha",
-  },
-};
-
 fields.forEach((field) => {
   field.addEventListener("blur", () => {
-    checkInput(field);
+    checkInput(field, form);
   });
   field.addEventListener("input", () => {
     field.setCustomValidity("");
@@ -37,7 +21,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   fields.forEach((field) => {
-    checkInput(field);
+    checkInput(field, form);
   });
 
   if (!form.checkValidity()) {
@@ -53,9 +37,10 @@ form.addEventListener("submit", (e) => {
 });
 
 async function login(dto) {
-  const errorContainer = form.querySelector("[data-error='login']");
-  errorContainer.dataset.state = "hidden";
-  errorContainer.textContent = "";
+  const feedbackContainer = form.querySelector("[data-error='login']");
+
+  feedbackContainer.dataset.state = "hidden";
+  feedbackContainer.textContent = "";
 
   button.dataset.state = "loading";
   button.disabled = true;
@@ -90,34 +75,16 @@ async function login(dto) {
     delete userData.password;
 
     localStorage.setItem("adopet_session", JSON.stringify(userData));
+
     window.location.href = "home.html";
   } catch (error) {
     console.error(error);
 
-    errorContainer.dataset.state = "visible";
-    errorContainer.textContent =
+    feedbackContainer.dataset.state = "visible";
+    feedbackContainer.textContent =
       "Não foi possível realizar o login. Tente novamente.";
   } finally {
     button.dataset.state = "default";
     button.disabled = false;
   }
-}
-
-function checkInput(field) {
-  const error = errorsTypes.find((error) => field.validity[error]);
-
-  const message = error ? errorsFeedback[field.name][error] : "";
-
-  const errorContainer = form.querySelector(`[data-error='${field.name}']`);
-
-  if (!field.checkValidity()) {
-    field.dataset.state = "error";
-    errorContainer.dataset.state = "visible";
-    errorContainer.textContent = message;
-    return;
-  }
-
-  field.dataset.state = "default";
-  errorContainer.dataset.state = "hidden";
-  errorContainer.textContent = "";
 }
