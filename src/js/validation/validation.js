@@ -20,7 +20,9 @@ export function checkInput(field, form) {
 
   const message = feedback ? validationMessages[field.name][feedback] : "";
 
-  const feedbackContainer = form.querySelector(`[data-error='${field.name}']`);
+  const feedbackContainer = form.querySelector(
+    `[data-feedback='${field.name}']`,
+  );
 
   if (!field.checkValidity()) {
     field.dataset.state = "error";
