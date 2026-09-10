@@ -66,69 +66,152 @@
           mensagem.
         </h1>
 
-        <form class="form form--alter" action="./home.html">
+        <form
+          novalidate
+          id="profile-form"
+          class="form form--alter"
+          data-profile-form
+        >
           <div class="form__fields">
             <h2 class="form__title">Perfil</h2>
 
-            <label class="form__label form__label--brand" for="photo"
-              >Foto
-              <div class="form__box form__box--alter">
-                <img
-                  class="form__photo"
-                  src="./assets/svg/icons-ui/user.svg"
-                  alt=""
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="photo"
+                >Foto
+                <div class="form__box form__box--alter">
+                  <img
+                    class="form__photo"
+                    src="./assets/svg/icons-ui/user.svg"
+                    alt=""
+                  />
+                  <button type="button" class="form__link form__link--alter">
+                    Clique na foto para editar
+                  </button>
+                </div>
+                <input
+                  id="photo"
+                  class="form__input form__input--alter sr-only"
+                  type="file"
+                  name="photo"
+                  data-field
+                  data-state="default"
+                  placeholder="Envie sua foto"
                 />
-                <button type="button" class="form__link form__link--alter">
-                  Clique na foto para editar
-                </button>
-              </div>
-              <input
-                id="photo"
-                class="form__input form__input--alter sr-only"
-                type="file"
-                placeholder="Envie sua foto"
-              />
-            </label>
-            <label class="form__label form__label--brand" for="name"
-              >Nome
-              <input
-                id="name"
-                class="form__input form__input--alter"
-                type="text"
-                placeholder="Insira seu nome completo"
-                autocomplete="name"
-              />
-            </label>
-            <label class="form__label form__label--brand" for="phone"
-              >Telefone
-              <input
-                id="phone"
-                class="form__input form__input--alter"
-                type="tel"
-                placeholder="Insira seu telefone e/ou whatsapp"
-                autocomplete="tel"
-              />
-            </label>
-            <label class="form__label form__label--brand" for="city"
-              >Cidade
-              <input
-                id="city"
-                class="form__input form__input--alter"
-                type="text"
-                placeholder="Insira sua cidade"
-                autocomplete="address-level2"
-              />
-            </label>
-            <label class="form__label form__label--brand" for="about"
-              >Sobre
-              <textarea
-                id="about"
-                class="form__input form__input--alter form__input--text form__input--profile"
-                placeholder="Escreva um pouco sobre você."
-              ></textarea>
-            </label>
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="photo"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="name"
+                >Nome
+                <input
+                  id="name"
+                  class="form__input form__input--alter"
+                  type="text"
+                  name="name"
+                  placeholder="Insira seu nome completo"
+                  autocomplete="name"
+                  data-field
+                  data-state="default"
+                  minlength="3"
+                  maxlength="40"
+                  required
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="name"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="phone"
+                >Telefone
+                <input
+                  id="phone"
+                  class="form__input form__input--alter"
+                  type="tel"
+                  name="phone"
+                  placeholder="Insira seu telefone e/ou whatsapp"
+                  autocomplete="tel"
+                  data-field
+                  data-state="default"
+                  minlength="10"
+                  maxlength="12"
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="phone"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="city"
+                >Cidade
+                <input
+                  id="city"
+                  class="form__input form__input--alter"
+                  type="text"
+                  name="city"
+                  placeholder="Insira sua cidade"
+                  autocomplete="address-level2"
+                  data-field
+                  data-state="default"
+                  minlength="3"
+                  maxlength="20"
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="city"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="about"
+                >Sobre
+                <textarea
+                  id="about"
+                  class="form__input form__input--alter form__input--text form__input--profile"
+                  name="about"
+                  placeholder="Escreva um pouco sobre você."
+                  data-field
+                  data-state="default"
+                  minlength="10"
+                  maxlength="250"
+                ></textarea>
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="about"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <span
+              class="form__feedback"
+              data-feedback="profile"
+              data-state="hidden"
+            ></span>
+
+            <button
+              class="button"
+              type="submit"
+              form="profile-form"
+              data-button-form
+              data-state="default"
+            >
+              Salvar
+            </button>
           </div>
-          <button class="button" type="submit">Salvar</button>
         </form>
       </section>
     </main>
@@ -136,5 +219,8 @@
     <footer class="footer">
       <p class="footer__text">2022 - Desenvolvido por Alura.</p>
     </footer>
+
+    <script type="module" src="./js/database.js"></script>
+    <script type="module" src="./js/profile.js"></script>
   </body>
 </html>

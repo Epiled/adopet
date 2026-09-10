@@ -82,52 +82,120 @@
           animal:
         </h1>
 
-        <form id="contact-form" class="form form--alter" action="./home.html">
+        <form
+          novalidate
+          id="contact-form"
+          class="form form--alter"
+          data-contact-form
+        >
           <div class="form__fields">
-            <label class="form__label form__label--brand" for="name"
-              >Nome
-              <input
-                id="name"
-                class="form__input form__input--alter"
-                type="text"
-                placeholder="Insira seu nome completo"
-                autocomplete="name"
-                required
-              />
-            </label>
-            <label class="form__label form__label--brand" for="phone"
-              >Telefone
-              <input
-                id="phone"
-                class="form__input form__input--alter"
-                type="tel"
-                placeholder="Insira seu telefone e/ou whatsapp"
-                autocomplete="tel"
-                required
-              />
-            </label>
-            <label class="form__label form__label--brand" for="animal-name"
-              >Nome do animal
-              <input
-                id="animal-name"
-                class="form__input form__input--alter"
-                type="text"
-                placeholder="Por qual animal você se interessou?"
-                required
-              />
-            </label>
-            <label class="form__label form__label--brand" for="message"
-              >Mensagem
-              <textarea
-                id="message"
-                class="form__input form__input--alter form__input--text form__input--contact"
-                placeholder="Escreva sua mensagem."
-                required
-              ></textarea>
-            </label>
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="name"
+                >Nome
+                <input
+                  id="name"
+                  class="form__input form__input--alter"
+                  type="text"
+                  name="name"
+                  placeholder="Insira seu nome completo"
+                  autocomplete="name"
+                  data-field
+                  data-state="default"
+                  minlength="3"
+                  maxlength="40"
+                  required
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="name"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="phone"
+                >Telefone
+                <input
+                  id="phone"
+                  class="form__input form__input--alter"
+                  type="tel"
+                  name="phone"
+                  placeholder="Insira seu telefone e/ou whatsapp"
+                  autocomplete="tel"
+                  data-field
+                  data-state="default"
+                  minlength="10"
+                  maxlength="12"
+                  required
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="phone"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="animal-name"
+                >Nome do animal
+                <input
+                  id="animal-name"
+                  class="form__input form__input--alter"
+                  type="text"
+                  name="animalName"
+                  placeholder="Por qual animal você se interessou?"
+                  data-field
+                  data-state="default"
+                  minlength="2"
+                  maxlength="40"
+                  required
+                />
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="animalName"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label form__label--brand" for="message"
+                >Mensagem
+                <textarea
+                  id="message"
+                  class="form__input form__input--alter form__input--text form__input--contact"
+                  name="message"
+                  placeholder="Escreva sua mensagem."
+                  data-field
+                  data-state="default"
+                  minlength="10"
+                  maxlength="300"
+                  required
+                ></textarea>
+              </label>
+              <span
+                class="form__feedback"
+                data-feedback="message"
+                data-state="hidden"
+              ></span>
+            </div>
+
+            <span
+              class="form__feedback"
+              data-feedback="contact"
+              data-state="hidden"
+            ></span>
           </div>
 
-          <button class="button" type="submit" form="contact-form">
+          <button
+            class="button"
+            type="submit"
+            form="contact-form"
+            data-button-form
+            data-state="default"
+          >
             Enviar
           </button>
         </form>
@@ -137,5 +205,7 @@
     <footer class="footer">
       <p class="footer__text">2022 - Desenvolvido por Alura.</p>
     </footer>
+
+    <script type="module" src="./js/contact.js"></script>
   </body>
 </html>
