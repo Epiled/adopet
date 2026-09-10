@@ -36,6 +36,10 @@
   animation: dots 1.2s steps(4, end) infinite;
 }
 
+.button:where([data-state="success"]) {
+  background-color: var(--color-primary);
+}
+
 @keyframes dots {
   0% {
     content: "";
