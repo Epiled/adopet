@@ -1,42 +1,13 @@
+import { checkInput } from "./validation/validation.js";
+
 const form = document.querySelector("[data-register-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
 const timeout = 1000;
 
-const errorsTypes = ["valueMissing", "typeMismatch", "tooShort", "customError"];
-
-const errorsFeedback = {
-  email: {
-    valueMissing: "O campo de e-mail não pode estar vazio.",
-    typeMismatch: "Por favor, preencha um e-mail válido.",
-    tooShort: "Por favor, preencha um e-mail válido. Ex: email@contato.com",
-    customError:
-      "Não foi possível realizar o cadastro, por favor tente mais tarde.",
-  },
-  name: {
-    valueMissing: "O campo nome não pode estar vazio.",
-    typeMismatch: "Por favor, preencha um nome.",
-    tooShort: "Por favor, preencha um nome válido. Ex: João Silva",
-    customError:
-      "Não foi possível realizar o cadastro, por favor tente mais tarde.",
-  },
-  password: {
-    valueMissing: "O campo de senha não pode estar vazio.",
-    tooShort: "Por favor, preencha um senha válido.",
-    customError:
-      "Não foi possível realizar o cadastro, por favor tente mais tarde.",
-  },
-  confirmPassword: {
-    valueMissing: "O campo de confirmar senha não pode estar vazio.",
-    tooShort: "Por favor, preencha um senha válido.",
-    customError:
-      "Não foi possível realizar o cadastro, por favor tente mais tarde.",
-  },
-};
-
 fields.forEach((field) => {
   field.addEventListener("blur", () => {
-    checkInput(field);
+    checkInput(field, form);
   });
   field.addEventListener("input", () => {
     field.setCustomValidity("");
@@ -50,7 +21,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   fields.forEach((field) => {
-    checkInput(field);
+    checkInput(field, form);
   });
 
   if (!form.checkValidity()) {
@@ -68,10 +39,10 @@ form.addEventListener("submit", (e) => {
 });
 
 async function register(dto) {
-  const errorContainer = form.querySelector("[data-error='register']");
+  const feedbackContainer = form.querySelector("[data-feedback='register']");
 
-  errorContainer.dataset.state = "hidden";
-  errorContainer.textContent = "";
+  feedbackContainer.dataset.state = "hidden";
+  feedbackContainer.textContent = "";
 
   button.dataset.state = "loading";
   button.disabled = true;
@@ -98,7 +69,7 @@ async function register(dto) {
 
     if (match) {
       throw new Error(
-        "Não foi possível realizar o cadastro, email já registrado",
+        "Não foi possível realizar o cadastro, email já registrado.",
       );
     }
 
@@ -121,10 +92,11 @@ async function register(dto) {
 
     localStorage.setItem("adopet", JSON.stringify(data));
 
-    button.dataset.state = "default";
+    button.dataset.state = "success";
+    button.textContent = "Cadastrado!";
 
-    errorContainer.dataset.state = "success";
-    errorContainer.textContent = "Cadastro realizado com sucesso!";
+    feedbackContainer.dataset.state = "success";
+    feedbackContainer.textContent = "Cadastro realizado com sucesso!";
 
     setTimeout(() => {
       window.location.href = "login.html";
@@ -132,42 +104,11 @@ async function register(dto) {
   } catch (error) {
     console.error(error);
 
-    errorContainer.dataset.state = "visible";
-    errorContainer.textContent =
+    feedbackContainer.dataset.state = "visible";
+    feedbackContainer.textContent =
       "Não foi possível realizar o cadastro. Tente novamente.";
 
     button.dataset.state = "default";
     button.disabled = false;
   }
-}
-
-function checkInput(field) {
-  if (field.name === "confirmPassword") {
-    const password = form.elements.password.value;
-    const confirmPassword = field.value;
-
-    if (password !== confirmPassword) {
-      field.setCustomValidity("passwordMismatch");
-      errorsFeedback.confirmPassword.customError = "As senhas não coincidem.";
-    } else {
-      field.setCustomValidity("");
-    }
-  }
-
-  const error = errorsTypes.find((error) => field.validity[error]);
-
-  const message = error ? errorsFeedback[field.name][error] : "";
-
-  const errorContainer = form.querySelector(`[data-error='${field.name}']`);
-
-  if (!field.checkValidity()) {
-    field.dataset.state = "error";
-    errorContainer.dataset.state = "visible";
-    errorContainer.textContent = message;
-    return;
-  }
-
-  field.dataset.state = "default";
-  errorContainer.dataset.state = "hidden";
-  errorContainer.textContent = "";
 }
