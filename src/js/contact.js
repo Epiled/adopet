@@ -56,7 +56,7 @@ async function contact(dto) {
     button.textContent = "Enviado!";
 
     feedbackContainer.dataset.state = "success";
-    feedbackContainer.textContent = "Menssagem enviada com sucesso!";
+    feedbackContainer.textContent = "Mensagem enviada com sucesso!";
   } catch (error) {
     console.error(error);
 
@@ -65,6 +65,6 @@ async function contact(dto) {
 
     feedbackContainer.dataset.state = "visible";
     feedbackContainer.textContent =
-      "Não foi possível enviar sua menssagem. Tente novamente.";
+      "Não foi possível enviar sua mensagem. Tente novamente.";
   }
 }
