@@ -17,4 +17,22 @@ export const validationMessages = {
     tooShort: "A senha deve ter pelo menos 8 caracteres.",
     customError: "As senhas não coincidem.",
   },
+  phone: {
+    valueMissing: "O campo telefone não pode estar vazio.",
+    tooShort: "O telefone deve ter pelo menos 10 caracteres.",
+  },
+  animalName: {
+    valueMissing: "O campo nome do animal não pode estar vazio.",
+    tooShort: "O nome do animal deve ter pelo menos 2 caracteres.",
+  },
+  message: {
+    valueMissing: "O campo mensagem não pode estar vazio.",
+    tooShort: "A mensagem deve ter pelo menos 10 caracteres.",
+  },
+  city: {
+    tooShort: "A cidade deve ter pelo menos 3 caracteres.",
+  },
+  about: {
+    tooShort: "A descrição deve ter pelo menos 10 caracteres.",
+  },
 };
