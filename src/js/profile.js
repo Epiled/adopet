@@ -1,4 +1,9 @@
+import { isAuthenticated } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
+
+if (!isAuthenticated()) {
+  window.location.href = "login.html";
+}
 
 const form = document.querySelector("[data-profile-form]");
 const fields = document.querySelectorAll("[data-field]");
