@@ -92,7 +92,8 @@ async function register(dto) {
 
     localStorage.setItem("adopet", JSON.stringify(data));
 
-    button.dataset.state = "default";
+    button.dataset.state = "success";
+    button.textContent = "Cadastrado!";
 
     feedbackContainer.dataset.state = "success";
     feedbackContainer.textContent = "Cadastro realizado com sucesso!";
