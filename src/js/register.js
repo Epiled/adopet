@@ -1,5 +1,8 @@
 import { checkInput } from "./validation/validation.js";
 import { initializeDatabase } from "./database.js";
+import { redirectAuthenticated } from "./auth.js";
+
+redirectAuthenticated();
 
 await initializeDatabase();
 

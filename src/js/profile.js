@@ -1,13 +1,11 @@
-import { isAuthenticated } from "./auth.js";
+import { requireAuth } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
 import { loadProfileImage, updateProfileImage } from "./profile-image.js";
 import { initializeDatabase } from "./database.js";
 
-await initializeDatabase();
+requireAuth();
 
-if (!isAuthenticated()) {
-  window.location.href = "login.html";
-}
+await initializeDatabase();
 
 loadProfileImage();
 
