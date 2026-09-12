@@ -1,9 +1,12 @@
 import { isAuthenticated } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
+import { loadProfileImage, updateProfileImage } from "./profile-image.js";
 
 if (!isAuthenticated()) {
   window.location.href = "login.html";
 }
+
+loadProfileImage();
 
 const form = document.querySelector("[data-profile-form]");
 const fields = document.querySelectorAll("[data-field]");
@@ -159,6 +162,8 @@ async function profile(dto) {
     delete sessionUpdate.password;
 
     localStorage.setItem("adopet_session", JSON.stringify(sessionUpdate));
+
+    updateProfileImage(photo);
 
     button.dataset.state = "success";
     button.textContent = "Salvo!";
