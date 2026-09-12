@@ -10,7 +10,19 @@ const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
 const timeout = 1000;
 
+const dataSession = localStorage.getItem("adopet_session");
+
+if (!dataSession) {
+  throw new Error("Sessão não encontrada.");
+}
+
+const userData = JSON.parse(dataSession);
+
 fields.forEach((field) => {
+  if (userData[field.name] != null) {
+    field.value = userData[field.name];
+  }
+
   field.addEventListener("blur", () => {
     checkInput(field, form);
   });
@@ -54,7 +66,54 @@ async function profile(dto) {
   try {
     await new Promise((resolve) => setTimeout(resolve, timeout));
 
-    console.log(dto);
+    const db = localStorage.getItem("adopet");
+
+    if (!db) {
+      throw new Error("Banco de dados não encontrado.");
+    }
+
+    const { users } = JSON.parse(db);
+
+    if (!Array.isArray(users)) {
+      throw new Error("Dados de usuários inválidos.");
+    }
+
+    const { id } = JSON.parse(dataSession);
+
+    if (!id) {
+      throw new Error("Usuário não encontrado na sessão.");
+    }
+
+    const match = users.find((item) => {
+      return item.id === id;
+    });
+
+    if (!match) {
+      throw new Error("Usuário não encontrado.");
+    }
+
+    const timestamp = new Date().toISOString();
+
+    const userUpdate = { ...match, ...dto, updated_at: timestamp };
+
+    const update = users.map((user) => {
+      return user.id === id ? userUpdate : user;
+    });
+
+    localStorage.setItem(
+      "adopet",
+      JSON.stringify({
+        users: update,
+      }),
+    );
+
+    const sessionUpdate = {
+      ...userUpdate,
+    };
+
+    delete sessionUpdate.password;
+
+    localStorage.setItem("adopet_session", JSON.stringify(sessionUpdate));
 
     button.dataset.state = "success";
     button.textContent = "Salvo!";
@@ -78,6 +137,6 @@ async function profile(dto) {
 
     feedbackContainer.dataset.state = "visible";
     feedbackContainer.textContent =
-      "Não foi atualizar seu perfil. Tente novamente.";
+      "Não foi possível atualizar seu perfil. Tente novamente.";
   }
 }
