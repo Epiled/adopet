@@ -144,16 +144,13 @@ async function profile(dto) {
       updated_at: timestamp,
     };
 
-    const update = users.map((user) => {
+    const data = JSON.parse(db);
+
+    data.users = data.users.map((user) => {
       return user.id === id ? userUpdate : user;
     });
 
-    localStorage.setItem(
-      "adopet",
-      JSON.stringify({
-        users: update,
-      }),
-    );
+    localStorage.setItem("adopet", JSON.stringify(data));
 
     const sessionUpdate = {
       ...userUpdate,
