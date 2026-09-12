@@ -1,6 +1,9 @@
 import { isAuthenticated } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
 import { loadProfileImage, updateProfileImage } from "./profile-image.js";
+import { initializeDatabase } from "./database.js";
+
+await initializeDatabase();
 
 if (!isAuthenticated()) {
   window.location.href = "login.html";
