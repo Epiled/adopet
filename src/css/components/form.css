@@ -132,6 +132,12 @@
 .form__photo {
   width: 8rem;
   height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.form__photo:where([data-image-form="true"]) {
+  border: 0.3rem solid var(--color-primary);
 }
 
 .form__photo:hover {

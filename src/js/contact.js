@@ -1,4 +1,7 @@
 import { checkInput } from "./validation/validation.js";
+import { loadProfileImage } from "./profile-image.js";
+
+loadProfileImage();
 
 const form = document.querySelector("[data-contact-form]");
 const fields = document.querySelectorAll("[data-field]");

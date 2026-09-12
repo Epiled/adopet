@@ -1,21 +1,51 @@
 import { isAuthenticated } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
+import { loadProfileImage, updateProfileImage } from "./profile-image.js";
 
 if (!isAuthenticated()) {
   window.location.href = "login.html";
 }
 
+loadProfileImage();
+
 const form = document.querySelector("[data-profile-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
+const imageProfile = document.querySelector("[data-image-form]");
 const timeout = 1000;
 
+const dataSession = localStorage.getItem("adopet_session");
+
+if (!dataSession) {
+  throw new Error("Sessão não encontrada.");
+}
+
+const userData = JSON.parse(dataSession);
+
+if (userData.photo) {
+  imageProfile.src = userData.photo;
+  imageProfile.dataset.imageForm = "true";
+}
+
 fields.forEach((field) => {
+  if (field.name !== "photo" && userData[field.name] != null) {
+    field.value = userData[field.name];
+  }
+
   field.addEventListener("blur", () => {
     checkInput(field, form);
   });
   field.addEventListener("input", () => {
     field.setCustomValidity("");
+
+    if (field.name === "photo") {
+      const file = field.files[0];
+
+      if (file) {
+        imageProfile.src = URL.createObjectURL(file);
+        imageProfile.dataset.imageForm = "true";
+      }
+    }
   });
   field.addEventListener("invalid", (e) => {
     e.preventDefault();
@@ -34,6 +64,7 @@ form.addEventListener("submit", (e) => {
   }
 
   const dto = {
+    photo: e.target.photo.files[0],
     name: e.target.name.value,
     phone: e.target.phone.value,
     city: e.target.city.value,
@@ -42,6 +73,22 @@ form.addEventListener("submit", (e) => {
 
   profile(dto);
 });
+
+function convertImageToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+
+    reader.onerror = () => {
+      reject(new Error("Não foi possível carregar a imagem."));
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
 
 async function profile(dto) {
   const feedbackContainer = form.querySelector("[data-feedback='profile']");
@@ -54,7 +101,69 @@ async function profile(dto) {
   try {
     await new Promise((resolve) => setTimeout(resolve, timeout));
 
-    console.log(dto);
+    const db = localStorage.getItem("adopet");
+
+    if (!db) {
+      throw new Error("Banco de dados não encontrado.");
+    }
+
+    const { users } = JSON.parse(db);
+
+    if (!Array.isArray(users)) {
+      throw new Error("Dados de usuários inválidos.");
+    }
+
+    const { id } = JSON.parse(dataSession);
+
+    if (!id) {
+      throw new Error("Usuário não encontrado na sessão.");
+    }
+
+    const match = users.find((item) => {
+      return item.id === id;
+    });
+
+    if (!match) {
+      throw new Error("Usuário não encontrado.");
+    }
+
+    const { photo: file, ...profileData } = dto;
+
+    let photo = match.photo;
+
+    if (file) {
+      photo = await convertImageToBase64(file);
+    }
+
+    const timestamp = new Date().toISOString();
+
+    const userUpdate = {
+      ...match,
+      ...profileData,
+      photo,
+      updated_at: timestamp,
+    };
+
+    const update = users.map((user) => {
+      return user.id === id ? userUpdate : user;
+    });
+
+    localStorage.setItem(
+      "adopet",
+      JSON.stringify({
+        users: update,
+      }),
+    );
+
+    const sessionUpdate = {
+      ...userUpdate,
+    };
+
+    delete sessionUpdate.password;
+
+    localStorage.setItem("adopet_session", JSON.stringify(sessionUpdate));
+
+    updateProfileImage(photo);
 
     button.dataset.state = "success";
     button.textContent = "Salvo!";
@@ -78,6 +187,6 @@ async function profile(dto) {
 
     feedbackContainer.dataset.state = "visible";
     feedbackContainer.textContent =
-      "Não foi atualizar seu perfil. Tente novamente.";
+      "Não foi possível atualizar seu perfil. Tente novamente.";
   }
 }

@@ -61,7 +61,16 @@
               class="menu__link"
               href="./profile.html"
               aria-label="Entrar em seu Perfil"
-            ></a>
+            >
+              <img
+                class="menu__profile"
+                src="./assets/svg/icons-ui/user.svg"
+                alt=""
+                width="50"
+                height="50"
+                data-profile-menu-image
+              />
+            </a>
           </li>
         </ul>
       </nav>
@@ -91,6 +100,7 @@
                     class="form__photo"
                     src="./assets/svg/icons-ui/user.svg"
                     alt=""
+                    data-image-form
                   />
                   <button type="button" class="form__link form__link--alter">
                     Clique na foto para editar
@@ -229,7 +239,8 @@
     </footer>
 
     <script type="module" src="./js/database.js"></script>
-    <script type="module" src="./js/profile.js"></script>
     <script type="module" src="./js/logout.js"></script>
+    <script type="module" src="./js/profile.js"></script>
+    <script type="module" src="./js/profile-image.js"></script>
   </body>
 </html>
