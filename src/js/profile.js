@@ -11,7 +11,7 @@ loadProfileImage();
 const form = document.querySelector("[data-profile-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
-const imageProfile = document.querySelector("[data-profile-image]");
+const imageProfile = document.querySelector("[data-image-form]");
 const timeout = 1000;
 
 const dataSession = localStorage.getItem("adopet_session");
@@ -24,7 +24,7 @@ const userData = JSON.parse(dataSession);
 
 if (userData.photo) {
   imageProfile.src = userData.photo;
-  imageProfile.dataset.profileImage = "true";
+  imageProfile.dataset.imageForm = "true";
 }
 
 fields.forEach((field) => {
@@ -43,7 +43,7 @@ fields.forEach((field) => {
 
       if (file) {
         imageProfile.src = URL.createObjectURL(file);
-        imageProfile.dataset.profileImage = "true";
+        imageProfile.dataset.imageForm = "true";
       }
     }
   });
