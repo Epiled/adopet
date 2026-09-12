@@ -1,8 +1,10 @@
-const logout = document.querySelector("[ data-logout");
+const logout = document.querySelector("[data-logout]");
 
-logout.addEventListener("click", (e) => {
-  e.preventDefault();
+if (logout) {
+  logout.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  localStorage.removeItem("adopet_session");
-  window.location.href = "index.html";
-});
+    localStorage.removeItem("adopet_session");
+    window.location.href = "index.html";
+  });
+}
