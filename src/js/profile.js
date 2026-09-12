@@ -8,6 +8,7 @@ if (!isAuthenticated()) {
 const form = document.querySelector("[data-profile-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
+const imageProfile = document.querySelector("[data-profile-image]");
 const timeout = 1000;
 
 const dataSession = localStorage.getItem("adopet_session");
@@ -18,8 +19,13 @@ if (!dataSession) {
 
 const userData = JSON.parse(dataSession);
 
+if (userData.photo) {
+  imageProfile.src = userData.photo;
+  imageProfile.dataset.profileImage = "true";
+}
+
 fields.forEach((field) => {
-  if (userData[field.name] != null) {
+  if (field.name !== "photo" && userData[field.name] != null) {
     field.value = userData[field.name];
   }
 
@@ -28,6 +34,15 @@ fields.forEach((field) => {
   });
   field.addEventListener("input", () => {
     field.setCustomValidity("");
+
+    if (field.name === "photo") {
+      const file = field.files[0];
+
+      if (file) {
+        imageProfile.src = URL.createObjectURL(file);
+        imageProfile.dataset.profileImage = "true";
+      }
+    }
   });
   field.addEventListener("invalid", (e) => {
     e.preventDefault();
@@ -46,6 +61,7 @@ form.addEventListener("submit", (e) => {
   }
 
   const dto = {
+    photo: e.target.photo.files[0],
     name: e.target.name.value,
     phone: e.target.phone.value,
     city: e.target.city.value,
@@ -54,6 +70,22 @@ form.addEventListener("submit", (e) => {
 
   profile(dto);
 });
+
+function convertImageToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+
+    reader.onerror = () => {
+      reject(new Error("Não foi possível carregar a imagem."));
+    };
+
+    reader.readAsDataURL(file);
+  });
+}
 
 async function profile(dto) {
   const feedbackContainer = form.querySelector("[data-feedback='profile']");
@@ -92,9 +124,22 @@ async function profile(dto) {
       throw new Error("Usuário não encontrado.");
     }
 
+    const { photo: file, ...profileData } = dto;
+
+    let photo = match.photo;
+
+    if (file) {
+      photo = await convertImageToBase64(file);
+    }
+
     const timestamp = new Date().toISOString();
 
-    const userUpdate = { ...match, ...dto, updated_at: timestamp };
+    const userUpdate = {
+      ...match,
+      ...profileData,
+      photo,
+      updated_at: timestamp,
+    };
 
     const update = users.map((user) => {
       return user.id === id ? userUpdate : user;
