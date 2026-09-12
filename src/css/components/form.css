@@ -23,7 +23,10 @@
 }
 
 .form__box--alter {
+  display: inline-flex;
   gap: 0.4rem;
+  width: auto;
+  border-radius: 50%;
 }
 
 .form__fields {

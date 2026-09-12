@@ -1,6 +1,9 @@
 import { isAuthenticated } from "./auth.js";
 import { checkInput } from "./validation/validation.js";
 import { loadProfileImage, updateProfileImage } from "./profile-image.js";
+import { initializeDatabase } from "./database.js";
+
+await initializeDatabase();
 
 if (!isAuthenticated()) {
   window.location.href = "login.html";
@@ -144,16 +147,13 @@ async function profile(dto) {
       updated_at: timestamp,
     };
 
-    const update = users.map((user) => {
+    const data = JSON.parse(db);
+
+    data.users = data.users.map((user) => {
       return user.id === id ? userUpdate : user;
     });
 
-    localStorage.setItem(
-      "adopet",
-      JSON.stringify({
-        users: update,
-      }),
-    );
+    localStorage.setItem("adopet", JSON.stringify(data));
 
     const sessionUpdate = {
       ...userUpdate,

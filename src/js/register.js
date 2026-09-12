@@ -1,4 +1,7 @@
 import { checkInput } from "./validation/validation.js";
+import { initializeDatabase } from "./database.js";
+
+await initializeDatabase();
 
 const form = document.querySelector("[data-register-form]");
 const fields = document.querySelectorAll("[data-field]");
