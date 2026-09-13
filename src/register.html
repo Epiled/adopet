@@ -118,42 +118,60 @@
             ></span>
           </div>
 
-          <div class="form__box">
+          <div class="form__box form__box--password">
             <label class="form__label" for="password"
               >Senha
-              <input
-                id="password"
-                class="form__input form__password"
-                type="password"
-                name="password"
-                placeholder="Crie uma senha"
-                autocomplete="new-password"
-                data-field
-                data-state="default"
-                required
-              />
+              <div class="form__box-icon">
+                <input
+                  id="password"
+                  class="form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Crie uma senha"
+                  autocomplete="new-password"
+                  data-field="password"
+                  data-state="default"
+                  required
+                />
+
+                <button
+                  class="form__icon form__icon--password"
+                  type="button"
+                  data-button-toggle="password"
+                  data-state="hidden"
+                ></button>
+              </div>
             </label>
             <span
               class="form__feedback"
               data-feedback="password"
-              data-state="hidden"
+              data-state="visible"
             ></span>
           </div>
 
-          <div class="form__box">
+          <div class="form__box form__box--password">
             <label class="form__label" for="confirmPassword"
               >Confirma sua senha
-              <input
-                id="confirmPassword"
-                class="form__input form__password"
-                type="password"
-                name="confirmPassword"
-                placeholder="Repita a senha criada acima"
-                autocomplete="new-password"
-                data-field
-                data-state="default"
-                required
-              />
+              <div class="form__box-icon">
+                <input
+                  id="confirmPassword"
+                  class="form__input"
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Repita a senha criada acima"
+                  autocomplete="new-password"
+                  data-field="confirmPassword"
+                  data-state="default"
+                  required
+                />
+
+                <button
+                  class="form__icon form__icon--password"
+                  type="button"
+                  data-button-toggle="confirmPassword"
+                  data-state="hidden"
+                ></button>
+              </div>
             </label>
             <span
               class="form__feedback"
@@ -186,5 +204,6 @@
     </footer>
 
     <script type="module" src="./js/register.js"></script>
+    <script type="module" src="./js/password.js"></script>
   </body>
 </html>
