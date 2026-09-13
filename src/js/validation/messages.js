@@ -20,6 +20,7 @@ export const validationMessages = {
   phone: {
     valueMissing: "O campo telefone não pode estar vazio.",
     tooShort: "O telefone deve ter pelo menos 10 caracteres.",
+    patternMismatch: "Insira um telefone válido. Ex: (55) 11 9",
   },
   animalName: {
     valueMissing: "O campo nome do animal não pode estar vazio.",
