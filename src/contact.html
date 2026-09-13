@@ -64,7 +64,15 @@
               aria-label="Entrar em contato via e-mail"
             ></a>
           </li>
-          <li class="menu__item menu__item--profile">
+          <li class="menu__item menu__item--exit" data-auth-logout="false">
+            <a
+              href="index.html"
+              class="menu__link menu__reset"
+              aria-label="Encerrar sessão e voltar a tela de login"
+              data-logout
+            ></a>
+          </li>
+          <li class="menu__item menu__item--profile" data-auth-profile="false">
             <a
               class="menu__link"
               href="./profile.html"
@@ -216,6 +224,6 @@
     </footer>
 
     <script type="module" src="./js/contact.js"></script>
-    <script type="module" src="./js/profile-image.js"></script>
+    <script type="module" src="./js/logout.js"></script>
   </body>
 </html>

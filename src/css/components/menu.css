@@ -63,6 +63,16 @@
   border: 0.2rem solid var(--color-primary);
 }
 
+.menu__item--exit:where([data-auth-logout="false"]),
+.menu__item--profile:where([data-auth-profile="false"]) {
+  display: none;
+}
+
+.menu__item--exit:where([data-auth-logout="true"]),
+.menu__item--profile:where([data-auth-profile="true"]) {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     padding: 0 4.8em;

@@ -1,12 +1,23 @@
 import { checkInput } from "./validation/validation.js";
 import { loadProfileImage } from "./profile-image.js";
+import { isAuthenticated } from "./auth.js";
 
 loadProfileImage();
 
 const form = document.querySelector("[data-contact-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
+const profile = document.querySelector("[data-auth-profile]");
+const logout = document.querySelector("[data-auth-logout]");
 const timeout = 1000;
+
+if (!isAuthenticated()) {
+  profile?.remove();
+  logout?.remove();
+} else {
+  profile.dataset.authProfile = "true";
+  logout.dataset.authLogout = "true";
+}
 
 fields.forEach((field) => {
   field.addEventListener("blur", () => {
