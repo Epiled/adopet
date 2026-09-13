@@ -5,13 +5,14 @@ export default [
   js.configs.recommended,
 
   {
-    files: ["src/js/**/*.js"],
+    files: ["src/js/**/*.js", "tests/**/*.js"],
 
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
         ...globals.browser,
+        ...globals.vitest,
       },
     },
   },
