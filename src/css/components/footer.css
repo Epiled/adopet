@@ -3,11 +3,11 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-primary);
-  min-height: 10.4em;
+  min-height: 10.4rem;
 }
 
 .footer__text {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--color-neutral-white);
 }

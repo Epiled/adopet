@@ -22,7 +22,7 @@
     url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
       41.5rem,
     url(../../assets/svg/icons-art/illustration.svg) no-repeat center
-      calc(100% - 9rem) / 24.7em,
+      calc(100% - 9rem) / 24.7rem,
     var(--color-secondary);
 }
 
@@ -49,14 +49,14 @@
 @media screen and (min-width: 768px) {
   .container {
     gap: 3.2rem;
-    background-size: 56em;
+    background-size: 56rem;
   }
 
   .container[data-layout="default"] {
     background:
       url(../../assets/svg/icons-art/paws.svg) no-repeat right top / auto
         37.4rem,
-      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56rem auto,
       url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
         66.4rem,
       var(--color-surface-white);
@@ -64,7 +64,7 @@
 
   .container[data-layout="default-tablet"] {
     background:
-      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56rem auto,
       url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
         66.4rem,
       var(--color-surface-white);
@@ -72,18 +72,18 @@
 
   .container[data-layout="brand"] {
     background-size:
-      56em auto,
+      56rem auto,
       auto 66.4rem,
-      33.8em;
+      33.8rem;
   }
 
   .container__content {
-    padding: 25em 3.2em 0 3.2em;
+    padding: 25rem 3.2rem 0 3.2rem;
     gap: 4rem;
   }
 
   .container__content[data-layout="default-tablet"] {
-    padding: 28.6em 0 0 0;
+    padding: 28.6rem 0 0 0;
   }
 }
 
@@ -91,25 +91,25 @@
   .container[data-layout="default"] {
     background-size:
       auto 40.7rem,
-      56em auto,
+      56rem auto,
       auto 66.4rem;
   }
 
   .container[data-layout="default-tablet"],
   .container[data-layout="default-desktop"] {
     background:
-      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56em auto,
+      url(../../assets/svg/icons-art/shape-1.svg) no-repeat left top / 56rem auto,
       url(../../assets/svg/icons-art/shape-2.svg) no-repeat right center / auto
         66.4rem,
       var(--color-surface-white);
   }
 
   .container__content {
-    padding: 13em 3.2em 0 3.2em;
+    padding: 13rem 3.2rem 0 3.2rem;
   }
 
   .container__content[data-layout="default-tablet"] {
-    padding: 20.4em 0 0 0;
-    max-width: 55.2em;
+    padding: 20.4rem 0 0 0;
+    max-width: 55.2rem;
   }
 }
