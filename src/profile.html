@@ -163,10 +163,11 @@
                   name="phone"
                   placeholder="Insira seu telefone e/ou whatsapp"
                   autocomplete="tel"
-                  data-field
+                  data-field="phone"
                   data-state="default"
-                  minlength="10"
-                  maxlength="12"
+                  minlength="18"
+                  maxlength="19"
+                  pattern="^\+55 \(\d{2}\) (?:\d{4}-\d{4}|\d \d{4}-\d{4})$"
                 />
               </label>
               <span
@@ -247,5 +248,6 @@
     <script type="module" src="./js/logout.js"></script>
     <script type="module" src="./js/profile.js"></script>
     <script type="module" src="./js/profile-image.js"></script>
+    <script type="module" src="./js/phone.js"></script>
   </body>
 </html>

@@ -91,21 +91,31 @@
             ></span>
           </div>
 
-          <div class="form__box">
+          <div class="form__box form__box--password">
             <label class="form__label" for="password"
               >Senha
-              <input
-                id="password"
-                class="form__input form__password"
-                type="password"
-                name="password"
-                placeholder="Insira sua senha"
-                autocomplete="current-password"
-                data-field
-                data-state="default"
-                required
-              />
+              <div class="form__box-icon">
+                <input
+                  id="password"
+                  class="form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Insira sua senha"
+                  autocomplete="current-password"
+                  data-field="password"
+                  data-state="default"
+                  required
+                />
+
+                <button
+                  class="form__icon form__icon--password"
+                  type="button"
+                  data-button-toggle="password"
+                  data-state="hidden"
+                ></button>
+              </div>
             </label>
+
             <span
               class="form__feedback"
               data-feedback="password"
@@ -139,5 +149,6 @@
     </footer>
 
     <script type="module" src="./js/login.js"></script>
+    <script type="module" src="./js/password.js"></script>
   </body>
 </html>
