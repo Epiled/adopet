@@ -12,9 +12,11 @@ buttons.forEach((button) => {
     if (field.type === "password") {
       field.type = "text";
       button.dataset.state = "visible";
+      button.setAttribute("aria-label", "Esconder senha");
     } else {
       field.type = "password";
       button.dataset.state = "hidden";
+      button.setAttribute("aria-label", "Mostrar senha");
     }
   });
 });
