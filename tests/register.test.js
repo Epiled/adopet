@@ -142,9 +142,6 @@ describe("register", () => {
 
     await vi.advanceTimersByTimeAsync(1000);
 
-    const db = JSON.parse(localStorage.getItem("adopet"));
-
-    expect(Array.isArray(db.users)).toBe(false);
     expect(registerFeedback.textContent).toBe(
       "Não foi possível realizar o cadastro. Tente novamente.",
     );

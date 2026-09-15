@@ -27,7 +27,6 @@ export function createLoginForm({
     value: passwordField,
   });
 
-  
   const emailFeedback = document.createElement("span");
   emailFeedback.dataset.feedback = "email";
   
