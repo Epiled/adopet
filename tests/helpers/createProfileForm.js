@@ -1,5 +1,4 @@
 export function createProfileForm({
-  photo,
   name = "Usuário",
   phone = null,
   city = null,

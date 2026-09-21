@@ -74,7 +74,6 @@ describe("profile", () => {
     const originalSession = JSON.parse(localStorage.getItem("adopet_session"));
 
     const { form, profileFeedback, button } = createProfileForm({
-      photo: null,
       name: "Usuário",
       phone: null,
       city: null,
