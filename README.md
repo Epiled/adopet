@@ -18,6 +18,7 @@
 - [📑 Table of Contents](#-table-of-contents)
 - [📖 Overview](#-overview)
 - [🛠️ Technologies](#-technologies)
+- [🧪 Testing](#-testing)
 - [⚡ Performance & PWA](#-performance--pwa)
 - [🚀 Demo](#-demo)
 - [📦 Install and Use](#-install-and-use)
@@ -27,7 +28,11 @@
 
 ## 📖 Overview
 
-Adopet is a streamlined web platform created to facilitate the connection between animal rescue organizations and individuals looking to adopt pets. This repository contains the static frontend implementation of the application, structured for rapid development, accessibility, and clean code organization.
+Adopet is a web platform designed to connect people interested in pet adoption with animals looking for a new home.
+
+The project was developed with a focus on accessibility, responsive design, clean code organization, and realistic user flows.
+
+It includes simulated authentication, user registration, profile management, pet listing, form validation, and automated tests using a localStorage-based mock database.
 
 ## 🛠 Technologies
 
@@ -35,11 +40,36 @@ The following technologies were used to build this project:
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Vitest](https://vitest.dev/)
+- [jsdom](https://github.com/jsdom/jsdom)
+- [ESLint](https://eslint.org/)
+- [BrowserSync](https://browsersync.io/)
+- [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## ⚡ Performance & PWA
 
 ![Lighthouse Performance](./design/github/lighthouse-report/lighthouse-report-light.png)
+
+## 🧪 Testing
+
+The project uses [Vitest](https://vitest.dev/) with jsdom for automated testing.
+
+The test suite covers:
+
+- Form validation
+- Authentication guards
+- Database initialization
+- Login flow
+- Registration flow
+- Profile updates
+- Phone number masking
+
+Run the test suite with:
+
+```bash
+npm run test:run
+```
 
 ## 🚀 Demo
 
@@ -73,6 +103,17 @@ npm install
 npm run dev
 ```
 
+4. Run the tests:
+```bash
+npm run test:run
+```
+
+5. Run ESLint:
+
+```bash
+npm run lint
+```
+
 ## 📂 File Structure
 
 Below is the project architecture. All development should be done inside the src/ folder
@@ -83,8 +124,13 @@ adopet/
 ├── src/                     # Main source code (Development)
 │   ├── assets/              # Original images and icons
 │   ├── css/                 # Styles following architecture BEM
-│   ├── js/                  # UI logic and PWA registration
-│   └── index.html           # Base semantic structure and main markup
+│   ├── js/                  # Application logic
+│   │   ├── mocks/           # Simulated database
+│   │   └── validation/      # Form validation
+│   └── *.html               # Application pages
+├── tests/
+│   ├── helpers/             # Test utilities
+│   └── *.test.js            # Automated tests
 └── package.json             # Project dependencies and npm scripts
 ```
 

@@ -4,7 +4,7 @@
   align-items: center;
   font-family: var(--font-family-primary);
   font-weight: 600;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   background-color: var(--color-accent);
   border-radius: 0.6rem;
   padding: 0.8rem;
@@ -34,6 +34,10 @@
   width: 1.2rem;
   text-align: left;
   animation: dots 1.2s steps(4, end) infinite;
+}
+
+.button:where([data-state="success"]) {
+  background-color: var(--color-primary);
 }
 
 @keyframes dots {

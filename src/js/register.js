@@ -2,11 +2,11 @@ import { checkInput } from "./validation/validation.js";
 import { initializeDatabase } from "./database.js";
 import { redirectAuthenticated } from "./auth.js";
 
-redirectAuthenticated()
+redirectAuthenticated();
 
 await initializeDatabase();
 
-const form = document.querySelector("[data-login-form]");
+const form = document.querySelector("[data-register-form]");
 const fields = document.querySelectorAll("[data-field]");
 const button = document.querySelector("[data-button-form]");
 const timeout = 1000;
@@ -36,14 +36,16 @@ form.addEventListener("submit", (e) => {
 
   const dto = {
     email: e.target.email.value,
+    name: e.target.name.value,
     password: e.target.password.value,
+    confirmPassword: e.target.confirmPassword.value,
   };
 
-  login(dto);
+  register(dto);
 });
 
-async function login(dto) {
-  const feedbackContainer = form.querySelector("[data-feedback='login']");
+async function register(dto) {
+  const feedbackContainer = form.querySelector("[data-feedback='register']");
 
   feedbackContainer.dataset.state = "hidden";
   feedbackContainer.textContent = "";
@@ -60,36 +62,58 @@ async function login(dto) {
       throw new Error("Banco de dados não encontrado.");
     }
 
-    const { users } = JSON.parse(db);
+    const data = JSON.parse(db);
+    const { users } = data;
 
     if (!Array.isArray(users)) {
       throw new Error("Dados de usuários inválidos.");
     }
 
     const match = users.find((item) => {
-      return dto.email === item.email && dto.password === item.password;
+      return dto.email === item.email;
     });
 
-    if (!match) {
+    if (match) {
       throw new Error(
-        "Não foi possível realizar o login, verifique seu e-mail e senha.",
+        "Não foi possível realizar o cadastro, email já registrado.",
       );
     }
 
-    const userData = { ...match };
+    const timestamp = new Date().toISOString();
 
-    delete userData.password;
+    const userData = {
+      id: crypto.randomUUID(),
+      photo: null,
+      name: dto.name,
+      email: dto.email,
+      password: dto.password,
+      about: null,
+      city: null,
+      role: "user",
+      created_at: timestamp,
+      updated_at: timestamp,
+    };
 
-    localStorage.setItem("adopet_session", JSON.stringify(userData));
+    users.push(userData);
 
-    window.location.href = "home.html";
+    localStorage.setItem("adopet", JSON.stringify(data));
+
+    button.dataset.state = "success";
+    button.textContent = "Cadastrado!";
+
+    feedbackContainer.dataset.state = "success";
+    feedbackContainer.textContent = "Cadastro realizado com sucesso!";
+
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, timeout * 4);
   } catch (error) {
     console.error(error);
 
     feedbackContainer.dataset.state = "visible";
     feedbackContainer.textContent =
-      "Não foi possível realizar o login. Tente novamente.";
-  } finally {
+      "Não foi possível realizar o cadastro. Tente novamente.";
+
     button.dataset.state = "default";
     button.disabled = false;
   }

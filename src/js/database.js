@@ -1,4 +1,4 @@
-async function initializeDatabase() {
+export async function initializeDatabase() {
   const db = localStorage.getItem("adopet");
 
   if (db) {
@@ -10,5 +10,3 @@ async function initializeDatabase() {
 
   localStorage.setItem("adopet", JSON.stringify(data));
 }
-
-initializeDatabase();

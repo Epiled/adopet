@@ -1,16 +1,16 @@
 .menu {
   position: absolute;
-  top: 3.4em;
+  top: 4.8rem;
   left: 0;
   width: 100%;
-  padding: 0 3.4em;
+  padding: 0 4.8rem;
   box-sizing: border-box;
 }
 
 .menu__navigation {
   display: flex;
   align-items: center;
-  gap: 3em;
+  gap: 6rem;
 }
 
 .menu__logo {
@@ -19,13 +19,13 @@
 
 .menu__list {
   display: flex;
-  gap: 3rem;
+  gap: 6rem;
   width: 100%;
 }
 
 .menu__item {
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -37,22 +37,47 @@
 }
 
 .menu__item--house {
+  width: 2rem;
   background-image: url(../../assets/svg/icons-ui/house.svg);
 }
 
 .menu__item--email {
+  width: 2.4rem;
   background-image: url(../../assets/svg/icons-ui/messages.svg);
 }
 
+.menu__item--exit {
+  background-image: url(../../assets/svg/icons-ui/exit.svg);
+}
+
 .menu__item--profile {
-  background-image: url(../../assets/svg/icons-ui/user.svg);
-  background-size: 5em;
   margin-left: auto;
+}
+
+.menu__profile {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.menu__profile:where([data-profile-menu-image="true"]) {
+  border: 0.2rem solid var(--color-primary);
+}
+
+.menu__item--exit:where([data-auth-logout="false"]),
+.menu__item--profile:where([data-auth-profile="false"]) {
+  display: none;
+}
+
+.menu__item--exit:where([data-auth-logout="true"]),
+.menu__item--profile:where([data-auth-profile="true"]) {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
   .menu {
-    padding: 0 4.8em;
+    padding: 0 4.8rem;
   }
 
   .menu__logo {
@@ -62,9 +87,17 @@
 
 @media screen and (min-width: 1440px) {
   .menu {
-    max-width: 112em;
+    max-width: 112rem;
     padding: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .menu__navigation {
+    gap: 4.8rem;
+  }
+
+  .menu__list {
+    gap: 3.2rem;
   }
 }

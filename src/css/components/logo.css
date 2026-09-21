@@ -1,22 +1,22 @@
 .logo {
-  width: 14.2em;
+  width: 14.2rem;
   height: auto;
 }
 
 .logo--alter {
   width: auto;
-  height: 4.6em;
+  height: 4.6rem;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
     width: auto;
-    height: 6.2em;
+    height: 6.2rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .logo {
-    height: 6.4em;
+    height: 6.4rem;
   }
 }
