@@ -65,11 +65,11 @@ form.addEventListener("submit", (e) => {
   }
 
   const dto = {
-    photo: e.target.photo.files[0],
-    name: e.target.name.value,
-    phone: e.target.phone.value,
-    city: e.target.city.value,
-    about: e.target.about.value,
+    photo: e.target.elements.photo.files[0],
+    name: e.target.elements.name.value,
+    phone: e.target.elements.phone.value,
+    city: e.target.elements.city.value,
+    about: e.target.elements.about.value,
   };
 
   profile(dto);
